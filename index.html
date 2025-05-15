@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seni Wedding HT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Parisienne&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .fancy-font {
+      font-family: 'Parisienne', cursive;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header / Navigation -->
+  <header class="flex justify-between items-center p-6 border-b">
+    <h1 class="text-2xl font-bold tracking-wide">Seni Wedding HT</h1>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#home" class="hover:underline">Halaman Utama</a>
+      <a href="#produk" class="hover:underline">Produk</a>
+      <a href="#katalog" class="hover:underline">Katalog</a>
+      <a href="#tempahan" class="hover:underline">Tempahan</a>
+      <a href="#hubungi" class="hover:underline">Hubungi</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden" style="background-image: url('img/bg-blur.png');">
+    <div class="hero-animate bg-white/70 p-8 rounded-xl shadow-xl max-w-xl">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4 fancy-font">Seni untuk Cinta Anda</h2>
+      <p class="text-lg md:text-xl mb-6">✨ Sentuhan eksklusif untuk hari bermakna anda ✨</p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#tempahan" class="bg-pink-400 hover:bg-pink-500 text-white px-6 py-3 rounded-full shadow transition">💌 Tempah Sekarang</a>
+        <a href="#katalog" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition">📖 Lihat Katalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Pilihan Section (Polished) -->
+  <section id="produk" class="py-20 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">🌟 Produk Pilihan</h2>
+    <p class="mb-12 text-gray-600 max-w-xl mx-auto">Temui rekaan eksklusif yang memikat hati untuk momen terindah anda.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Produk 1 -->
+      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="img/produk/mas-kahwin/MK-Acrylic(A).jpg" alt="Frame Kaligrafi" class="rounded-t-2xl w-full h-64 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1 text-gray-800">Frame Kaligrafi</h3>
+          <p class="text-sm text-gray-500">Keindahan ayat dalam bingkai penuh elegan — khas untuk penyatuan dua jiwa.</p>
+        </div>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="img/produk/wedding-board/Acrylic(A).jpg" alt="Puzzle Tetamu" class="rounded-t-2xl w-full h-64 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1 text-gray-800">Wedding Board</h3>
+          <p class="text-sm text-gray-500">Persembahan mas kahwin dalam gaya yang mempesona dan bermakna.</p>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
+        <img src="img/produk/guest-puzzle/Guest-Puzzle(2).jpg" alt="GuestBook Puzzle" class="rounded-t-2xl w-full h-64 object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1 text-gray-800">GuestBook Puzzle</h3>
+          <p class="text-sm text-gray-500">Kenangan setiap tetamu, satu keping puzzle cinta yang abadi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto-Scrolling Produk Eksklusif -->
+  <section class="py-20 px-6 md:px-16 bg-gray-50 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">✨ Lain-lain Rekaan Eksklusif</h2>
+
+    <div class="relative w-full">
+      <div class="scroll-track flex gap-8 animate-scroll-x px-6">
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/mas-kahwin/MK-wood(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">MK Wood A</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Mirror(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (A)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Wood(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Wood (A)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Wood(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Wood (B)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/mas-kahwin/MK-Acrylic(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">MK Acrylic (B)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/mas-kahwin/MK-Wood(C).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">MK Wood (C)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Mirror(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (B)</h3>
+        </div>
+        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Mirror(C).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (C)</h3>
+        </div>
+         <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/mas-kahwin/MK-Wood(F).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">MK Wood (F)</h3>
+        </div>
+         <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+          <img src="img/produk/wedding-board/Mirror(D).jpg" class="rounded-md h-48 w-full object-cover mb-2">
+          <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (D)</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
