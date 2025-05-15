@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk Perkahwinan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfaf6;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<header class="bg-white border-b shadow-sm px-6 py-4 flex justify-between items-center relative z-50">
+  <!-- Logo -->
+  <a href="index.html">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain">
+  </a>
+
+  <!-- Nav -->
+  <nav class="hidden md:flex items-center gap-6 text-sm relative">
+    <a href="index.html" class="hover:underline">Home</a>
+
+    <!-- Produk Dropdown (persistent) -->
+    <div class="relative group">
+      <button class="peer hover:underline font-semibold text-gray-700">Produk ▼</button>
+
+      <div class="absolute left-1/5 -translate-x-1/2 top-full mt-2 invisible peer-hover:visible group-hover:visible opacity-0 peer-hover:opacity-100 group-hover:opacity-100 bg-white shadow-xl rounded-lg p-6 gap-12 w-[720px] flex justify-between z-50 transition-all duration-300 pointer-events-auto">
+        <!-- Wedding Board -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Wedding Board</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="produk.html" class="hover:text-pink-500">Board Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Mirror</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Acrylic</a></li>
+          </ul>
+        </div>
+
+        <!-- Mas Kahwin -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Mas Kahwin</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="#" class="hover:text-pink-500">Wood</a></li>
+            <li><a href="#" class="hover:text-pink-500">Acrylic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <li><a href="#" class="text-sm font-semibold text-gray-700 mb-2 hover:text-pink-500">Guest PuzzleBooks</a></li>
+          <ul class="space-y-1 text-sm text-gray-600">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a href="catalog.html" class="hover:underline">Katalog</a>
+    <a href="tempahan.html" class="hover:underline">Tempahan</a>
+    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+  </nav>
+</header>
+
+<!-- Produk Section -->
+<section class="text-center py-16 px-4">
+  <h2 class="text-3xl md:text-4xl font-bold text-pink-500 mb-4">💍 Produk Eksklusif Perkahwinan</h2>
+  <p class="max-w-2xl mx-auto text-gray-600 mb-10">Paparan rekaan istimewa untuk kenangan terindah anda.</p>
+
+<section class="px-6 py-4 max-w-6xl mx-auto">
+  <div class="flex flex-wrap items-center gap-4 mb-8">
+    <h3 class="font-semibold text-gray-700 mr-2">FILTER BY:</h3>
+
+    <!-- Category Dropdown -->
+    <div class="relative">
+  <button onclick="toggleCategory()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+    Kategori ▼
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div id="categoryDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
+    <ul class="py-2 text-sm text-gray-700">
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Wedding Board</button></li>
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Mas Kahwin</button></li>
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Guest Puzzlebooks</button></li>
+    </ul>
+  </div>
+</div>
+
+    <!-- Material Dropdown -->
+    <div class="relative">
+      <button onclick="toggleMaterial()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+        Bahan ▼
+      </button>
+      <div id="MaterialDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
+     <ul class="py-2 text-sm text-gray-700">
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Wood</button></li>
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Mirror</button></li>
+      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Acrylic</button></li>
+    </ul>
+  </div>
+</div>
+
+<div class="relative">
+  <button onclick="togglePriceUnit()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+    Unit Harga ▼
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div id="PriceUnitDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
+    <ul class="py-2 text-sm text-gray-700">
+      <li>
+        <button class="block w-full text-left px-4 py-2 hover:bg-pink-50">MYR</button>
+      </li>
+      <li>
+        <button class="block w-full text-left px-4 py-2 hover:bg-pink-50">SG USD</button>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section class="px-6 py-8 max-w-7xl mx-auto">
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Wood</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+    <!-- Wood A -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/Wood(A).jpg" alt="Wood A" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Wood (A)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM250.00</p>
+    </div>
+
+    <!-- Wood B -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/Wood(B).jpg" alt="Wood B" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Wood (B)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM250.00</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Mirror</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+    <!-- Mirror A -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/Mirror(A).jpg" alt="Mirror A" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (A)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM290.00</p>
+    </div>
+
+    <!-- Mirror B -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/Mirror(B).jpg" alt="Mirror B" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (B)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
+    </div>
+
+    <!-- Mirror C -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/Mirror(C).jpg" alt="Mirror C" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (C)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM290.00</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Acrylic</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Acrylic A -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/MK-Acrylic(A).jpg" alt="MK Acrylic A" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">MK Acrylic (A)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
+    </div>
+
+    <!-- Acrylic B -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+      <img src="img/produk/MK-Acrylic(B).jpg" alt="MK Acrylic B" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">MK Acrylic (B)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
+    </div>
+  </div>
+
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+  <!-- Mas Kahwin 1 -->
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-1.jpg" alt="MK 1" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (1)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <!-- Mas Kahwin 2 -->
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-2.jpg" alt="MK 2" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (2)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <!-- Mas Kahwin 3 -->
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-3.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (3)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-4.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (4)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-5.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (5)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-6.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (6)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-7.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (7)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-8.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (8)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-9.jpg" alt="MK 9" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (9)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-10.jpg" alt="MK 10" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (10)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
+    <img src="img/produk/MK-11.jpg" alt="MK 11" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (11)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+  </div>
+</div>
+</section>
+ 
+<script>
+function toggleCategory() {
+    const menu = document.getElementById("categoryDropdown");
+    menu.classList.toggle("hidden");
+  }
+
+  // Optional: klik luar tutup dropdown
+  document.addEventListener("click", function (e) {
+    const btn = document.querySelector("button[onclick='toggleCategory()']");
+    const menu = document.getElementById("categoryDropdown");
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add("hidden");
+    }
+  });
+
+
+  function toggleMaterial() {
+    const menu = document.getElementById("MaterialDropdown");
+    menu.classList.toggle("hidden");
+  }
+
+  // Optional: klik luar tutup dropdown
+  document.addEventListener("click", function (e) {
+    const btn = document.querySelector("button[onclick='toggleMaterial()']");
+    const menu = document.getElementById("materialDropdown");
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add("hidden");
+    }
+  });
+
+
+  function togglePriceUnit() {
+    const menu = document.getElementById("PriceUnitDropdown");
+    menu.classList.toggle("hidden");
+  }
+
+  // Optional: klik luar tutup dropdown
+  document.addEventListener("click", function (e) {
+    const btn = document.querySelector("button[onclick='togglePriceUnit()']");
+    const menu = document.getElementById("PriceUnitDropdown");
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add("hidden");
+    }
+  });
+  
+</script>
+
+
+
+</body>
+</html>
