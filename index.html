@@ -19,28 +19,65 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
 
+<body class="bg-[#fdfaf6] text-gray-800 overflow-x-hidden">
   <!-- Header / Navigation -->
-  <header class="flex justify-between items-center p-6 border-b">
-    <h1 class="text-2xl font-bold tracking-wide">Seni Wedding HT</h1>
-    <nav class="hidden md:flex gap-6 text-sm">
-      <a href="#home" class="hover:underline">Halaman Utama</a>
-      <a href="#produk" class="hover:underline">Produk</a>
-      <a href="#katalog" class="hover:underline">Katalog</a>
-      <a href="#tempahan" class="hover:underline">Tempahan</a>
-      <a href="#hubungi" class="hover:underline">Hubungi</a>
-    </nav>
-  </header>
+ <header class="bg-white border-b shadow-sm px-6 py-4 flex justify-between items-center relative z-50">
+  <!-- Logo -->
+  <a href="index.html">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain">
+  </a>
+
+  <!-- Nav -->
+  <nav class="hidden md:flex items-center gap-6 text-sm relative">
+    <a href="index.html" class="hover:underline">Home</a>
+
+    <!-- Produk Dropdown (persistent) -->
+    <div class="relative group">
+      <button class="peer hover:underline font-semibold text-gray-700">Produk ▼</button>
+
+      <div class="absolute left-1/5 -translate-x-1/2 top-full mt-2 invisible peer-hover:visible group-hover:visible opacity-0 peer-hover:opacity-100 group-hover:opacity-100 bg-white shadow-xl rounded-lg p-6 gap-12 w-[720px] flex justify-between z-50 transition-all duration-300 pointer-events-auto">
+        <!-- Wedding Board -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Wedding Board</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="produk.html" class="hover:text-pink-500">Board Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Mirror</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Acrylic</a></li>
+          </ul>
+        </div>
+
+        <!-- Mas Kahwin -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Mas Kahwin</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="produk.html" class="hover:text-pink-500">Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Acrylic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <li><a href="produk.html" class="text-sm font-semibold text-gray-700 mb-2 hover:text-pink-500">Guest PuzzleBooks</a></li>
+          <ul class="space-y-1 text-sm text-gray-600">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a href="catalog.html" class="hover:underline">Katalog</a>
+    <a href="tempahan.html" class="hover:underline">Tempahan</a>
+    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+  </nav>
+</header>
 
   <!-- Hero Section -->
   <section id="home" class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden" style="background-image: url('img/bg-blur.png');">
     <div class="hero-animate bg-white/70 p-8 rounded-xl shadow-xl max-w-xl">
-      <h2 class="text-3xl md:text-5xl font-bold mb-4 fancy-font">Seni untuk Cinta Anda</h2>
+      <h2 class="text-6xl md:text-6xl font-bold mb-4 text-[#d48c94] fancy-font">Seni untuk Cinta Anda</h2>
       <p class="text-lg md:text-xl mb-6">✨ Sentuhan eksklusif untuk hari bermakna anda ✨</p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="#tempahan" class="bg-pink-400 hover:bg-pink-500 text-white px-6 py-3 rounded-full shadow transition">💌 Tempah Sekarang</a>
-        <a href="#katalog" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition">📖 Lihat Katalog</a>
+        <a href="#tempahan" class="bg-pink-400 hover:bg-[#eebec3] hover:scale-105 text-white px-6 py-3 rounded-full shadow transition">💌 Tempah Sekarang</a>
+        <a href="SeniWedding-Catalog.pdf" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition">📖 MuatTurun Katalog</a>
       </div>
     </div>
   </section>
@@ -80,49 +117,49 @@
     </div>
   </section>
 
-  <!-- Auto-Scrolling Produk Eksklusif -->
-  <section class="py-20 px-6 md:px-16 bg-gray-50 text-center">
+
+  <section class="py-20 px-6 md:px-16 bg-[#fdfaf6] text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">✨ Lain-lain Rekaan Eksklusif</h2>
 
     <div class="relative w-full">
       <div class="scroll-track flex gap-8 animate-scroll-x px-6">
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/mas-kahwin/MK-wood(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">MK Wood A</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Mirror(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (A)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Wood(A).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Wood (A)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Wood(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Wood (B)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/mas-kahwin/MK-Acrylic(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">MK Acrylic (B)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/mas-kahwin/MK-Wood(C).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">MK Wood (C)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Mirror(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (B)</h3>
         </div>
-        <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+        <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Mirror(C).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (C)</h3>
         </div>
-         <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+         <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/mas-kahwin/MK-Wood(F).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">MK Wood (F)</h3>
         </div>
-         <div class="min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
+         <div class="scroll-item min-w-[280px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4">
           <img src="img/produk/wedding-board/Mirror(D).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (D)</h3>
         </div>
