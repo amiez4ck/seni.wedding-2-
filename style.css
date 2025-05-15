@@ -1,12 +1,17 @@
+
 body {
-      font-family: 'Poppins', sans-serif;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-    .fancy-font {
-      font-family: 'Parisienne', cursive;
-    }
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfaf6;
+  color: #2f2f2f;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.fancy-font {
+  font-family: 'Parisienne', cursive;
+}
 
 @keyframes scrollX {
   0% {
@@ -21,4 +26,75 @@ body {
   display: flex;
   width: max-content;
   animation: scrollX 40s linear infinite;
+  position: relative;
+}
+
+.scroll-track::before,
+.scroll-track::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 10;
+}
+
+.scroll-track::before {
+  left: 0;
+  background: linear-gradient(to right, #fdfaf6, transparent);
+}
+
+.scroll-track::after {
+  right: 0;
+  background: linear-gradient(to left, #fdfaf6, transparent);
+}
+
+.produk-card {
+  animation: fadeInUp 1s ease both;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track .scroll-item {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.scroll-track .scroll-item:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 10px 20px rgba(212, 140, 148, 0.25);
+}
+
+.scroll-track .scroll-item img {
+  transition: transform 0.5s ease;
+}
+
+.scroll-track .scroll-item:hover img {
+  transform: scale(1.05);
+}
+
+
+.produk-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(212, 140, 148, 0.3);
+}
+
+.produk-card img {
+  transition: transform 0.6s ease;
+}
+
+.produk-card:hover img {
+  transform: scale(1.05);
+}
+
+
+button, .cta-btn, a.btn {
+  transition: all 0.3s ease;
+}
+
+button:hover, .cta-btn:hover, a.btn:hover {
+  box-shadow: 0 8px 20px rgba(212, 140, 148, 0.4);
+  transform: scale(1.05);
 }
