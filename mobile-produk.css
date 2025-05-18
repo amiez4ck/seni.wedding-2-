@@ -127,6 +127,53 @@ nav.show {
     transform: none !important;
   }
 
+  .produk-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .produk-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .produk-slider .product-item {
+    min-width: 270px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  .produk-slider-wrapper {
+  position: relative;
+}
+
+.produk-slider::before,
+.produk-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.produk-slider::before {
+  left: 0;
+  background: linear-gradient(to right, #fdfaf6, transparent);
+}
+
+.produk-slider::after {
+  right: 0;
+  background: linear-gradient(to left, #fdfaf6, transparent);
+}
+
   /* Button lebih responsif */
   button,
   .cta-btn,
