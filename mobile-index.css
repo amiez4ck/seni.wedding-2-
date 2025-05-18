@@ -9,86 +9,89 @@
     display: none !important;
   }
 
-body {
-  font-size: 16px;
-  padding: 10px;
-}
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-section {
-  padding: 40px 10px;
-}
+  section {
+    padding: 40px 10px;
+  }
 
-h1, h2, h3 {
-  font-size: 5vw;
-  text-align: center;
-}
+  h1,
+  h2,
+  h3 {
+    font-size: 5vw;
+    text-align: center;
+  }
 
-.container {
-  display: block;
-  width: 100%;
-}
+  .container {
+    display: block;
+    width: 100%;
+  }
 
-header {
-  display: block;
-  position: relative;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  header {
+    display: block;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.mobile-nav-toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #d48c94;
-  position: absolute;
-  left: 1rem;
-  top: 1.2rem;
-  z-index: 60;
-}
+  .mobile-nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #d48c94;
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    z-index: 60;
+  }
 
-header .logo-center {
-  margin: 0 auto;
-  height: 3.5rem;
-}
+  header .logo-center {
+    margin: 0 auto;
+    height: 3.5rem;
+  }
 
-nav {
-  flex-direction: column;
-  background-color: white;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  z-index: 55;
-  padding: 1.2rem;
-  text-align: center;
-  animation: slideDown 0.3s ease forwards;
-}
+  nav {
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 55;
+    padding: 1.2rem;
+    text-align: center;
+    animation: slideDown 0.3s ease forwards;
+  }
 
-nav a {
-  padding: 0.8rem 0;
-  font-size: 1rem;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  display: block;
-}
+  nav a {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    display: block;
+  }
 
-nav.show {
-  display: flex;
-}
+  nav.show {
+    display: flex;
+  }
 
-#mobileMenu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
+  #mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
     top: 100%;
     left: 0;
     right: 0;
@@ -97,13 +100,13 @@ nav.show {
     padding: 1.2rem;
     text-align: center;
     animation: slideDown 0.8s ease forwards;
-}
+  }
 
-#mobileMenu.show {
-  display: flex;
-}
+  #mobileMenu.show {
+    display: flex;
+  }
 
- #mobileMenu a {
+  #mobileMenu a {
     padding: 0.8rem 0;
     font-size: 1rem;
     color: #333;
@@ -113,33 +116,33 @@ nav.show {
 
 
 
-/* Grid dan Hero Section Mobile */
-section#home {
-  height: auto;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-section#home h2 {
-  font-size: 2.5rem;
-}
-
-section#home p {
-  font-size: 1.1rem;
-}
-
-.scroll-down {
-  color: #fff;
-}
-
-.scroll-item {
-  min-width: clamp(220px, 30vw, 250px);
-}
-
-
-.scroll-track .scroll-item img {
+  /* Grid dan Hero Section Mobile */
+  section#home {
     height: auto;
-    max-height: 180px;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  section#home h2 {
+    font-size: 2.5rem;
+  }
+
+  section#home p {
+    font-size: 1.1rem;
+  }
+
+  .scroll-down {
+    color: #fff;
+  }
+
+  .scroll-item {
+    min-width: clamp(220px, 30vw, 250px);
+  }
+
+
+  .scroll-track .scroll-item img {
+    height: auto;
+    max-height: 220px;
     object-fit: contain;
     border-radius: 12px;
     width: 100%;
@@ -151,30 +154,31 @@ section#home p {
     flex-shrink: 0;
   }
 
-.grid {
-  grid-template-columns: 1fr !important;
-  gap: 1.5rem !important;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Animasi dropdown */
-@keyframes slideDown {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
-html {
-  scroll-behavior: smooth;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Animasi dropdown */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
 }
