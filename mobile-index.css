@@ -140,7 +140,7 @@ section#home p {
 .scroll-track .scroll-item img {
     height: auto;
     max-height: 180px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     width: 100%;
     image-rendering: -webkit-optimize-contrast;
