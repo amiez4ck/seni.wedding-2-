@@ -53,22 +53,12 @@
 <body class="text-gray-800">
 
 <header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
-  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+  <button class="mobile-nav-toggle block md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
 
   <!-- Logo -->
   <a href="index.html" class="mx-auto">
     <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
   </a>
-
-<!-- Mobile Nav Menu -->
-<nav id="mobileMenu" class="md:hidden">
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
-</nav>
-
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
     <a href="index.html" class="hover:underline">Home</a>
@@ -114,7 +104,17 @@
 
   </nav>
 </div>
+
+<nav id="mobileMenu" class="md:hidden">
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="catalog.html">Katalog</a>
+  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html">Troli 🛒</a>
+</nav>
+
 </header>
+
 
 <!-- Produk Section -->
 <section class="text-center py-16 px-4">
@@ -168,8 +168,10 @@
 
 <div class="product-section" data-kategori="wedding-board wood">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Wood</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-<div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+  <div class="produk-slider flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+<div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="190"
      data-addon-myr="40"
      data-harga-sgd="58"
@@ -208,7 +210,7 @@
 
 
     <!-- Wood B -->
-    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
       data-harga-myr="190"
      data-addon-myr="40"
      data-harga-sgd="58"
@@ -249,10 +251,11 @@
 
   <div class="product-section" data-kategori="wedding-board mirror">
     <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Mirror</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+ <div class="produk-slider flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
     
 
-    <div class="product-item wedding-board mirror rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board mirror rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="290"
      data-addon-myr="40"
      data-harga-sgd="88"
@@ -294,7 +297,7 @@
     </div>
 
     <!-- Mirror B -->
-    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="290"
      data-addon-myr="40"
      data-harga-sgd="88"
@@ -333,7 +336,7 @@
     </div>
 
     <!-- Mirror C -->
-    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="290"
      data-addon-myr="40"
      data-harga-sgd="88"
@@ -370,7 +373,7 @@
        </div>
 
 
-   <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+   <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
     data-harga-myr="170"
      data-addon-myr="RM40"
      data-harga-sgd="52"
@@ -413,9 +416,11 @@
 
 <div class="product-section" data-kategori="wedding-board acrylic">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Acrylic</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+ <div class="produk-slider flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
     <!-- Acrylic B -->
-    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
          data-harga-myr="170"
          data-harga-sgd="52"
          data-addon-myr="40"
@@ -458,7 +463,7 @@
     </div>
 
 
-    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
          data-harga-myr="170"
          data-harga-sgd="52"
          data-addon-myr="40"
@@ -503,9 +508,10 @@
    </div>
 
    <div class="product-section" data-kategori="mas-kahwin acrylic">
-  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2><p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+  <div class="produk-slider flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="100"
      data-harga-sgd="30">
     
@@ -535,7 +541,7 @@
   </div>
 
   <!-- Mas Kahwin 3 -->
-  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="95"
      data-harga-sgd="29">
 
@@ -564,7 +570,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="280"
      data-harga-sgd="85">
 
@@ -593,7 +599,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="280"
      data-harga-sgd="85">
 
@@ -627,8 +633,9 @@
 
   <div class="product-section" data-kategori="mas-kahwin wood">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Wood</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+<div class="produk-slider flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="89"
      data-harga-sgd="27">
 
@@ -656,7 +663,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin wood  bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin wood  bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="80"
      data-harga-sgd="24">
 
@@ -684,7 +691,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="89"
      data-harga-sgd="27">
 
@@ -712,7 +719,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="89"
      data-harga-sgd="27">
 
@@ -740,7 +747,7 @@
 
   </div>
 
-  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="90"
      data-harga-sgd="27">
      
@@ -769,7 +776,7 @@
   </div>
 
 <!-- Produk MK-Wood(F) -->
-<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="250"
      data-harga-sgd="76">
 
@@ -798,7 +805,7 @@
 </div>
 
 <!-- MK (11) -->
-<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
      data-harga-myr="69"
      data-harga-sgd="21">
 
