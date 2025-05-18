@@ -1,0 +1,129 @@
+/* === mobile.css === */
+/* Aktif hanya untuk skrin 768px ke bawah */
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+
+header {
+  display: block;
+  position: relative;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .mobile-nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #d48c94;
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  z-index: 60;
+}
+
+header .logo-center {
+  margin: 0 auto;
+  height: 3.5rem;
+}
+
+nav {
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 55;
+  padding: 1.2rem;
+  text-align: center;
+  animation: slideDown 0.3s ease forwards;
+}
+
+nav a {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  display: block;
+}
+
+nav.show {
+  display: flex;
+}
+
+#mobileMenu {
+  display: none;
+  flex-direction: column;
+}
+
+#mobileMenu.show {
+  display: flex;
+}
+
+  /* Hero text center & shrink font */
+  .hero-animate h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-animate p {
+    font-size: 1rem !important;
+  }
+
+  /* Produk grid 1 kolum */
+  .grid-cols-2,
+  .grid-cols-3,
+  .sm\\:grid-cols-2,
+  .lg\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Produk kad padding kecil */
+  .produk-card {
+    padding: 1rem !important;
+  }
+
+  /* Gambar produk kecil */
+  .produk-card img,
+  .scroll-track img {
+    height: 240px !important;
+    object-fit: cover;
+  }
+
+  /* Scroll section padding */
+  .scroll-track {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    gap: 1rem !important;
+  }
+
+  /* Dropdown menu penuh skrin kecil */
+  .dropdown-menu,
+  .relative > div[style*="absolute"] {
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Button lebih responsif */
+  button,
+  .cta-btn,
+  a.btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Header spacing */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
