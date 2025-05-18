@@ -132,6 +132,19 @@ section#home p {
   color: #fff;
 }
 
+.scroll-track .scroll-item img {
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .scroll-track .scroll-item {
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+
 .grid {
   grid-template-columns: 1fr !important;
   gap: 1.5rem !important;
