@@ -143,6 +143,7 @@ section#home p {
     object-fit: cover;
     border-radius: 12px;
     width: 100%;
+    image-rendering: -webkit-optimize-contrast;
   }
 
   .scroll-track .scroll-item {
