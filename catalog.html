@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katalog Perkahwinan</title>
-  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
+  <link rel="stylesheet" href="mobile-catalog.css" media="only screen and (max-width: 768px)">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -60,13 +60,14 @@
 
 <body class="text-gray-800">
 
-<header class="bg-white border-b shadow-sm px-6 py-4 flex justify-between items-center relative z-50">
+<header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
+  <button class="mobile-nav-toggle block md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+
   <!-- Logo -->
-  <a href="index.html">
-    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain">
+  <a href="index.html" class="mx-auto">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
   </a>
 
-  <!-- Nav -->
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
     <a href="index.html" class="hover:underline">Home</a>
 
@@ -100,12 +101,26 @@
           </ul>
         </div>
       </div>
-    </div>
+  
 
     <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="tempahan.html" class="hover:underline">Tempahan</a>
     <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="cart.html" class="relative">
+    🛒
+    <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
+    </a>
+
   </nav>
+</div>
+
+  <nav id="mobileMenu" class="md:hidden">
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="catalog.html">Katalog</a>
+  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html">Troli 🛒</a>
+</nav>
+
 </header>
 
 <section class="relative py-20 px-6 text-center bg-cover bg-center bg-overlay overflow-hidden" style="background-image: url('img/5186109.jpg'); background-size: 1200px;">
