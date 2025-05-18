@@ -38,7 +38,7 @@ h1, h2, h3 {
 .animate-scroll-x {
   display: flex;
   width: max-content;
-  animation: scrollX 40s linear infinite;
+  animation: scrollX 18s linear infinite;
   position: relative;
 }
 
