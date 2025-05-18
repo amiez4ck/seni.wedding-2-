@@ -4,28 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produk Perkahwinan</title>
-  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
+  <link rel="stylesheet" href="mobile-produk.css" media="only screen and (max-width: 768px)">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fdfaf6;
-    }
+
+ html, body {
+  overflow: visible !important;
+  position: relative;
+}
+
+   body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfaf6;
+  position: relative;
+  will-change: transform, opacity;
+}
+
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
+
+
+ .fly-to-cart {
+  pointer-events: none;
+  transition: transform 1.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 1.8s ease;
+  will-change: transform, opacity;
+  z-index: 9999;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+#troliIcon {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 1000;
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
   </style>
 </head>
 <body class="text-gray-800">
 
-<header class="bg-white border-b shadow-sm px-6 py-4 flex justify-between items-center relative z-50">
+<header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
+  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+
   <!-- Logo -->
-  <a href="index.html">
-    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain">
+  <a href="index.html" class="mx-auto">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
   </a>
 
-  <!-- Nav -->
+<!-- Mobile Nav Menu -->
+<nav id="mobileMenu" class="md:hidden">
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="catalog.html">Katalog</a>
+  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html">Troli 🛒</a>
+</nav>
+
+
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
     <a href="index.html" class="hover:underline">Home</a>
 
@@ -48,23 +92,28 @@
         <div>
           <h4 class="text-sm font-semibold text-gray-700 mb-2">Mas Kahwin</h4>
           <ul class="space-y-1 text-sm text-gray-600">
-            <li><a href="#" class="hover:text-pink-500">Wood</a></li>
-            <li><a href="#" class="hover:text-pink-500">Acrylic</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Acrylic</a></li>
           </ul>
         </div>
 
         <div>
-          <li><a href="#" class="text-sm font-semibold text-gray-700 mb-2 hover:text-pink-500">Guest PuzzleBooks</a></li>
+          <li><a href="produk.html" class="text-sm font-semibold text-gray-700 mb-2 hover:text-pink-500">Guest PuzzleBooks</a></li>
           <ul class="space-y-1 text-sm text-gray-600">
           </ul>
         </div>
       </div>
-    </div>
+  
 
     <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="tempahan.html" class="hover:underline">Tempahan</a>
     <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="cart.html" class="relative">
+    🛒
+    <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
+    </a>
+
   </nav>
+</div>
 </header>
 
 <!-- Produk Section -->
@@ -72,278 +121,1036 @@
   <h2 class="text-3xl md:text-4xl font-bold text-pink-500 mb-4">💍 Produk Eksklusif Perkahwinan</h2>
   <p class="max-w-2xl mx-auto text-gray-600 mb-10">Paparan rekaan istimewa untuk kenangan terindah anda.</p>
 
-<section class="px-6 py-4 max-w-6xl mx-auto">
-  <div class="flex flex-wrap items-center gap-4 mb-8">
-    <h3 class="font-semibold text-gray-700 mr-2">FILTER BY:</h3>
-
-    <!-- Category Dropdown -->
-    <div class="relative">
-  <button onclick="toggleCategory()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-    Kategori ▼
-  </button>
-
-  <!-- Dropdown Menu -->
-  <div id="categoryDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
-    <ul class="py-2 text-sm text-gray-700">
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Wedding Board</button></li>
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Mas Kahwin</button></li>
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Guest Puzzlebooks</button></li>
-    </ul>
-  </div>
+<div class="mb-4">
+  <label for="filter-kategori" class="font-medium text-sm mr-2">Kategori:</label>
+  <select id="filter-kategori" class="border rounded px-3 py-1 text-sm">
+    <option value="all">Semua</option>
+    <option value="wedding-board">Wedding Board</option>
+    <option value="mas-kahwin">Mas Kahwin</option>
+    <option value="guestbook">Guest Puzzlebook</option>
+  </select>
 </div>
 
-    <!-- Material Dropdown -->
-    <div class="relative">
-      <button onclick="toggleMaterial()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-        Bahan ▼
-      </button>
-      <div id="MaterialDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
-     <ul class="py-2 text-sm text-gray-700">
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Wood</button></li>
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Mirror</button></li>
-      <li><button class="block w-full text-left px-4 py-2 hover:bg-pink-50">Acrylic</button></li>
-    </ul>
-  </div>
+<!-- Bahan Filter -->
+<div class="mb-4">
+  <label for="filter-bahan" class="font-medium text-sm mr-2">Bahan:</label>
+  <select id="filter-bahan" class="border rounded px-3 py-1 text-sm">
+    <option value="all">Semua</option>
+    <option value="wood">Wood</option>
+    <option value="mirror">Mirror</option>
+    <option value="acrylic">Acrylic</option>
+  </select>
 </div>
 
-<div class="relative">
-  <button onclick="togglePriceUnit()" class="bg-white border border-gray-300 rounded-full px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-    Unit Harga ▼
-  </button>
-
-  <!-- Dropdown Menu -->
-  <div id="PriceUnitDropdown" class="absolute mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-48 z-50">
-    <ul class="py-2 text-sm text-gray-700">
-      <li>
-        <button class="block w-full text-left px-4 py-2 hover:bg-pink-50">MYR</button>
-      </li>
-      <li>
-        <button class="block w-full text-left px-4 py-2 hover:bg-pink-50">SG USD</button>
-      </li>
-    </ul>
-  </div>
+<section>
+<div class="mb-4">
+  <label for="filter-harga" class="font-medium text-sm mr-2">Julat Harga:</label>
+  <select id="filter-harga" class="border rounded px-3 py-1 text-sm">
+    <option value="all">Semua</option>
+    <option value="low">RM0 - RM49</option>
+    <option value="mid">RM50 - RM99</option>
+    <option value="high">RM100+</option>
+  </select>
 </div>
 </section>
 
+
 <section class="px-6 py-8 max-w-7xl mx-auto">
+  <div class="mb-6">
+  <label for="unitHargaSelect" class="font-semibold mr-2">Unit Harga:</label>
+  <select id="unitHargaSelect" class="border rounded px-3 py-1 text-sm">
+    <option value="myr" selected>MYR</option>
+    <option value="sgd">SGD</option>
+  </select>
+</div>
+</section>
+
+
+<div class="product-section" data-kategori="wedding-board wood">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Wood</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
 
-    <!-- Wood A -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/Wood(A).jpg" alt="Wood A" class="w-full h-64 object-cover rounded-md mb-4">
-      <p class="text-sm text-gray-500 mb-1">Wood (A)</p>
-      <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
-      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM250.00</p>
-    </div>
+  <img src="img/produk/wedding-board/Wood(A).jpg" alt="WB Wood A" 
+  class="w-full h-64 object-cover rounded-md mb-4" />
+
+  <p class="text-sm text-gray-500 mb-1">Wood (A)</p>
+  <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
+  <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+  <!-- Checkbox Add-On -->
+    <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+    </label>
+
+  <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+  <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (A)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/Wood(A).jpg">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (A)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/Wood(A).jpg">
+  Bayar Sekarang
+</button>
+</div>
+
 
     <!-- Wood B -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/Wood(B).jpg" alt="Wood B" class="w-full h-64 object-cover rounded-md mb-4">
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/Wood(B).jpg" alt="WB Wood B" 
+      class="w-full h-64 object-cover rounded-md mb-4" />
       <p class="text-sm text-gray-500 mb-1">Wood (B)</p>
       <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
       <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM250.00</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (B)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/Wood(B).jpg">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (A)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/Wood(B).jpg">
+  Bayar Sekarang
+</button>
+
     </div>
   </div>
+  </div>
 
-  <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Mirror</h2>
+  <div class="product-section" data-kategori="wedding-board mirror">
+    <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Mirror</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    
 
-    <!-- Mirror A -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/Mirror(A).jpg" alt="Mirror A" class="w-full h-64 object-cover rounded-md mb-4">
+    <div class="product-item wedding-board mirror rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="290"
+     data-addon-myr="40"
+     data-harga-sgd="88"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/Mirror(A).jpg" alt="WB Mirror A" 
+      class="w-full h-64 object-cover rounded-md mb-4" />
+
       <p class="text-sm text-gray-500 mb-1">Mirror (A)</p>
       <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
       <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM290.00</p>
+
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM290.00</p>
+
+
+   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (A)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(A).jpg">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (A)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(A).jpg">
+  Bayar Sekarang
+</button>
+
+
+
     </div>
 
     <!-- Mirror B -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/Mirror(B).jpg" alt="Mirror B" class="w-full h-64 object-cover rounded-md mb-4">
+    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="290"
+     data-addon-myr="40"
+     data-harga-sgd="88"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/Mirror(B).jpg" alt="WB Mirror B" class="w-full h-64 object-cover rounded-md mb-4">
       <p class="text-sm text-gray-500 mb-1">Mirror (B)</p>
       <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
       <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
+
+  
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      </label>
+    
+      <p class="harga-final text-pink-600 font-bold mt-3">RM270.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (B)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(B).jpg">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (B)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(B).jpg">
+  Bayar Sekarang
+</button>
+
+
     </div>
 
     <!-- Mirror C -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/Mirror(C).jpg" alt="Mirror C" class="w-full h-64 object-cover rounded-md mb-4">
-      <p class="text-sm text-gray-500 mb-1">Mirror (C)</p>
+    <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="290"
+     data-addon-myr="40"
+     data-harga-sgd="88"
+     data-addon-sgd="12">
+
+       <img src="img/produk/wedding-board/Mirror(C).jpg" alt="WB Mirror C" class="w-full h-64 object-cover rounded-md mb-4">
+       <p class="text-sm text-gray-500 mb-1">Mirror (C)</p>
+       <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+       <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
+
+       
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       Tambah Stand (+<span class="addon-amount">RM40</span>)
+       </label>
+
+       <p class="harga-final text-pink-600 font-bold mt-3">RM290.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (B)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(C).jpg">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (C)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Mirror(C).jpg">
+  Bayar Sekarang
+</button>
+       </div>
+
+
+   <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+    data-harga-myr="170"
+     data-addon-myr="RM40"
+     data-harga-sgd="52"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/Mirror(D).jpg" alt="WB Mirror D" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (D)</p>
       <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
-      <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM290.00</p>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      
+
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       Tambah Stand (+<span class="addon-amount">RM40</span>)
+       </label>
+      
+       <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (B)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/Mirror(D).jpg">
+        Simpan ke Troli
+        </button> 
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (D)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/Mirror(D).jpg">
+        Bayar Sekarang
+        </button>
+       </div>
+
     </div>
   </div>
+  </div>
 
+
+<div class="product-section" data-kategori="wedding-board acrylic">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Acrylic</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- Acrylic A -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/MK-Acrylic(A).jpg" alt="MK Acrylic A" class="w-full h-64 object-cover rounded-md mb-4">
-      <p class="text-sm text-gray-500 mb-1">MK Acrylic (A)</p>
-      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
-      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
-    </div>
-
     <!-- Acrylic B -->
-    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-      <img src="img/produk/MK-Acrylic(B).jpg" alt="MK Acrylic B" class="w-full h-64 object-cover rounded-md mb-4">
-      <p class="text-sm text-gray-500 mb-1">MK Acrylic (B)</p>
+    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+         data-harga-myr="170"
+         data-harga-sgd="52"
+         data-addon-myr="40"
+         data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/Acrylic(A).jpg" alt="WB Acrylic A" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Acrylic (A)</p>
       <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
       <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
-      <p class="text-pink-500 font-semibold mt-3">RM270.00</p>
+
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="270" data-addon-sgd="82">
+      Tambah Bunga (+<span class="addon-amount">RM100</span>)
+      </label>
+    
+      <p class="harga-final text-pink-600 font-bold mt-4">RM170.00</p>
+
+  
+   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Acrylic (A)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/Acrylic(A).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Acrylic (A)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Acrylic(A).jpg">
+  Bayar Sekarang
+</button>
+
     </div>
-  </div>
 
+
+    <div class="product-item wedding-board acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+         data-harga-myr="170"
+         data-harga-sgd="52"
+         data-addon-myr="40"
+         data-addon-sgd="12">
+         
+    <img src="img/produk/wedding-board/Acrylic(B).jpg" alt="WB Acrylic B" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">Acrylic (B)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="270" data-addon-sgd="82">
+      Tambah Bunga (+<span class="addon-amount">RM100</span>)
+      </label>
+      
+      <p class="harga-final text-pink-600 font-bold mt-4">RM170.00</p>
+
+        
+
+         <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Acrylic (B)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/Mirror(B).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Acrylic (B)"
+        data-harga-myr="290"
+        data-harga-sgd="88"
+        data-img="img/produk/wedding-board/Acrylic(B).jpg">
+  Bayar Sekarang
+</button>
+    </div>
+   </div>
+   </div>
+
+   <div class="product-section" data-kategori="mas-kahwin acrylic">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-  <!-- Mas Kahwin 1 -->
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-1.jpg" alt="MK 1" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (1)</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="100"
+     data-harga-sgd="30">
+    
+    <img src="img/produk/mas-kahwin/MK-Acrylic(A).jpg" alt="MK Acrylic A" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Acrylic (A)</p>
     <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
-  </div>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM100.00</p>
+      
 
-  <!-- Mas Kahwin 2 -->
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-2.jpg" alt="MK 2" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (2)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
-    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (A)"
+        data-harga-myr="100"
+        data-harga-sgd="30"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (A)"
+        data-harga-myr="100"
+        data-harga-sgd="30"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
   <!-- Mas Kahwin 3 -->
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-3.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (3)</p>
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="95"
+     data-harga-sgd="29">
+
+    <img src="img/produk/mas-kahwin/MK-Acrylic(B).jpg" alt="MK Acrylic B" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Acrylic(B)</p>
     <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM95.00</p>
+     
+
+        <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (B)"
+        data-harga-myr="95"
+        data-harga-sgd="29"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (B)"
+        data-harga-myr="95"
+        data-harga-sgd="29"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-4.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (4)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="280"
+     data-harga-sgd="85">
+
+    <img src="img/produk/mas-kahwin/MK-Acrylic(C).jpg" alt="MK Acrylic C" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Acrylic(C)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar + Bunga</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
+      
+
+<button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (C)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg">
+        Simpan ke Troli
+        </button> 
+
+    <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (C)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-5.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (5)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="280"
+     data-harga-sgd="85">
+
+    <img src="img/produk/mas-kahwin/MK-Acrylic(D).jpg" alt="MK Acrylic D" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (D)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar + Bunga</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
+
+     
+
+   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (D)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (D)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg">
+  Bayar Sekarang
+</button>
+
+  </div>
+  </div>
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-6.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (6)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-section" data-kategori="mas-kahwin wood">
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Wood</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/MK-wood(A).jpg" alt="MK Wood A" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (A)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (A)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-wood(A).jpg">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (A)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/MK-wood(A).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-7.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (7)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin wood  bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="80"
+     data-harga-sgd="24">
+
+    <img src="img/produk/mas-kahwin/MK-wood(B).jpg" alt="MK Wood B" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (B)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM80.00</p>
+
+     <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (B)"
+        data-harga-myr="80"
+        data-harga-sgd="24"
+        data-img="img/produk/mas-kahwin/MK-wood(B).jpg">
+        Simpan ke Troli
+        </button> 
+
+ <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (B)"
+        data-harga-myr="80"
+        data-harga-sgd="24"
+        data-img="img/produk/mas-kahwin/MK-wood(B).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-8.jpg" alt="MK 3" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (8)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/MK-Wood(C).jpg" alt="MK Wood C" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (C)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+     <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (C)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg">
+        Simpan ke Troli
+        </button> 
+
+    <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (C)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-9.jpg" alt="MK 9" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (9)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/MK-Wood(D).jpg" alt="MK Wood D" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (D)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (D)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg">
+        Simpan ke Troli
+        </button> 
+
+    <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (D)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-10.jpg" alt="MK 10" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (10)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="90"
+     data-harga-sgd="27">
+     
+    <img src="img/produk/mas-kahwin/MK-Wood(E).jpg" alt="MK Wood E" class="w-full h-64 object-cover rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood(D)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM90.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (E)"
+        data-harga-myr="90"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg">
+        Simpan ke Troli
+        </button> 
+
+    <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (E)"
+        data-harga-myr="90"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg">
+  Bayar Sekarang
+</button>
+
   </div>
 
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center">
-    <img src="img/produk/MK-11.jpg" alt="MK 11" class="w-full h-64 object-cover rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK (11)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
-    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
-    <p class="text-pink-500 font-semibold mt-3">RM80.00</p>
+<!-- Produk MK-Wood(F) -->
+<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="250"
+     data-harga-sgd="76">
+
+  <img src="img/produk/mas-kahwin/MK-Wood(F).jpg" alt="MK Wood F" class="w-full h-64 object-cover rounded-md mb-4">
+  <p class="text-sm text-gray-500 mb-1">MK Wood (F)</p>
+  <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+  <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+  <p class="harga-final text-pink-600 font-bold mt-3">RM250.00</p>
+
+<button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (F)"
+        data-harga-myr="250"
+        data-harga-sgd="76"
+        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (F)"
+        data-harga-myr="250"
+        data-harga-sgd="76"
+        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg">
+  Bayar Sekarang
+</button>
+
+</div>
+
+<!-- MK (11) -->
+<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+     data-harga-myr="69"
+     data-harga-sgd="21">
+
+  <img src="img/produk/mas-kahwin/MK-Wood(G).jpg" alt="MK Wood G" class="w-full h-64 object-cover rounded-md mb-4">
+  <p class="text-sm text-gray-500 mb-1">MK Wood (G)</p>
+  <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+  <p class="text-sm text-gray-600">Size: 25cm x 25cm</p>
+  <p class="harga-final text-pink-600 font-bold mt-3">RM69.00</p>
+
+ <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (G)"
+        data-harga-myr="69"
+        data-harga-sgd="21"
+        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (G)"
+        data-harga-myr="69"
+        data-harga-sgd="21"
+        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg">
+  Bayar Sekarang
+</button>
+
+</div>
+</div>
+</div>
+
+<div class="product-section" data-kategori="guestbook wood">
+  <h2 class="text-pink-600 font-bold text-base mb-3">Guest Puzzlebooks</h2>
+  <div class="flex justify-center mb-12">
+
+    <div class="product-item guestbook wood  w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center"
+         data-harga-myr="300"
+         data-harga-sgd="91"
+         data-addon-myr="40"
+         data-addon-sgd="12">
+
+         <img src="img/produk/guest-puzzle/Guest-Puzzle(1).jpg"
+         alt="Guest Puzzlebook"
+         class="w-full h-62 object-cover rounded-md mb-4">
+
+       <p class="text-sm text-gray-500 mb-1">Guest Puzzlebook</p>
+       <h3 class="text-lg font-bold text-gray-800 mb-2">MDF Engraved Puzzle</h3>
+       <p class="text-sm text-gray-600">Size: 24 Inchi x 18 Inchi</p>
+       <p class="text-sm text-gray-600">96 Pieces Puzzle + Marker Stand</p>
+
+        <label class="block">
+        <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+        Tambah Stand (+<span class="addon-amount">RM40</span>)
+       </label>
+
+       <p class="harga-final text-pink-600 font-bold mt-3">RM300.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Guest PuzzleBooks(A)"
+        data-harga-myr="300"
+        data-harga-sgd="91"
+        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg">
+  Simpan ke Troli
+</button>
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Guest PuzzleBooks - (A)"
+        data-harga-myr="300"
+        data-harga-sgd="91"
+        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg">
+  Bayar Sekarang
+</button>
+
+    </div>
   </div>
 </div>
 </section>
  
 <script>
-function toggleCategory() {
-    const menu = document.getElementById("categoryDropdown");
-    menu.classList.toggle("hidden");
-  }
 
-  // Optional: klik luar tutup dropdown
-  document.addEventListener("click", function (e) {
-    const btn = document.querySelector("button[onclick='toggleCategory()']");
-    const menu = document.getElementById("categoryDropdown");
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add("hidden");
-    }
+  const kategoriFilter = document.getElementById("filter-kategori");
+  const bahanFilter = document.getElementById("filter-bahan");
+  const hargaFilter = document.getElementById("filter-harga");
+  const items = document.querySelectorAll(".product-item");
+
+function filterProduk() {
+  const kategori = kategoriFilter.value;
+  const bahan = bahanFilter.value;
+  const harga = hargaFilter.value;
+
+  items.forEach(item => {
+    const matchKategori = kategori === "all" || item.classList.contains(kategori);
+    const matchBahan = bahan === "all" || item.classList.contains(bahan);
+
+    const unit = document.getElementById("unitHargaSelect").value;
+const price = parseFloat(item.getAttribute(`data-harga-${unit}`)) || 0;
+
+    let matchHarga = true;
+    if (harga === "low") matchHarga = price <= 49;
+    else if (harga === "mid") matchHarga = price >= 50 && price <= 99;
+    else if (harga === "high") matchHarga = price >= 100;
+
+    item.style.display = (matchKategori && matchBahan && matchHarga) ? "block" : "none";
   });
 
+     document.querySelectorAll(".product-section").forEach(section => {
+  const productItems = section.querySelectorAll(".product-item");
+  const anyVisible = Array.from(productItems).some(item => item.style.display !== "none");
+  section.style.display = anyVisible ? "block" : "none";
+});
 
-  function toggleMaterial() {
-    const menu = document.getElementById("MaterialDropdown");
-    menu.classList.toggle("hidden");
-  }
+}
 
-  // Optional: klik luar tutup dropdown
-  document.addEventListener("click", function (e) {
-    const btn = document.querySelector("button[onclick='toggleMaterial()']");
-    const menu = document.getElementById("materialDropdown");
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add("hidden");
-    }
-  });
+[kategoriFilter, bahanFilter, hargaFilter].forEach(el => el.addEventListener("change", filterProduk));
 
 
   function togglePriceUnit() {
     const menu = document.getElementById("PriceUnitDropdown");
     menu.classList.toggle("hidden");
+
   }
 
   // Optional: klik luar tutup dropdown
   document.addEventListener("click", function (e) {
     const btn = document.querySelector("button[onclick='togglePriceUnit()']");
     const menu = document.getElementById("PriceUnitDropdown");
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+    if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+
       menu.classList.add("hidden");
     }
   });
-  
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const unitSelect = document.getElementById("unitHargaSelect");
+
+ function updateHargaProduk(item) {
+  const selected = unitSelect.value;
+  const hargaAsas = parseFloat(item.getAttribute(`data-harga-${selected}`)) || 0;
+  const hargaEl = item.querySelector(".harga-final");
+  const addonCheckboxes = item.querySelectorAll(".addon-checkbox");
+
+  let totalAddon = 0;
+
+  addonCheckboxes.forEach(checkbox => {
+    const addon = parseFloat(checkbox.getAttribute(`data-addon-${selected}`)) || 0;
+    const label = checkbox.closest("label").querySelector(".addon-amount");
+
+    // Tukar paparan nilai pada label checkbox
+    if (label) {
+      label.textContent = selected === "sgd"
+        ? (addon >= 0 ? `S$${addon}` : `-S$${Math.abs(addon)}`)
+        : (addon >= 0 ? `RM${addon}` : `-RM${Math.abs(addon)}`);
+    }
+
+    // Tambah nilai add-on jika ditanda
+    if (checkbox.checked) totalAddon += addon;
+  });
+
+  const total = hargaAsas + totalAddon;
+
+  hargaEl.textContent = selected === "sgd"
+    ? `S$${total.toFixed(2)}`
+    : `RM${total.toFixed(2)}`;
+}
+
+
+  // Apply listeners
+  unitSelect.addEventListener("change", () => {
+    document.querySelectorAll(".product-item").forEach(updateHargaProduk);
+  });
+
+  document.querySelectorAll(".addon-checkbox").forEach(cb => {
+    cb.addEventListener("change", (e) => {
+      const item = e.target.closest(".product-item");
+      updateHargaProduk(item);
+    });
+  });
+
+
+document.querySelectorAll(".product-item").forEach(updateHargaProduk);
+
+
+});
+
+document.querySelectorAll(".btn-whatsapp").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".product-item");
+    const productName = button.getAttribute("data-product");
+    const unit = document.getElementById("unitHargaSelect").value;
+    const hargaAsas = parseFloat(item.getAttribute(`data-harga-${unit}`)) || 0;
+
+    let totalAddon = 0;
+    const addonList = [];
+
+    item.querySelectorAll(".addon-checkbox").forEach(cb => {
+      if (cb.checked) {
+        const addonValue = parseFloat(cb.getAttribute(`data-addon-${unit}`)) || 0;
+        totalAddon += addonValue;
+        addonList.push(cb.parentElement.innerText.trim());
+      }
+    });
+
+    const total = hargaAsas + totalAddon;
+    const msg = `Saya berminat untuk membeli ${productName} dengan harga ${unit === 'sgd' ? 'S$' : 'RM'}${total.toFixed(2)}.\nAdd-On: ${addonList.join(', ') || 'Tiada add-on.'}`;
+
+    const encodedMsg = encodeURIComponent(msg);
+    const phone = "60104557314"; // Ganti nombor WhatsApp kamu
+
+    window.open(`https://wa.me/${phone}?text=${encodedMsg}`, "_blank");
+  });
+});
+
+
+  document.querySelectorAll(".btn-bayar").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = button.closest(".product-item");
+      const nama = button.getAttribute("data-nama");
+      const img = button.getAttribute("data-img");
+      const hargaMyr = parseFloat(button.getAttribute("data-harga-myr")) || 0;
+      const hargaSgd = parseFloat(button.getAttribute("data-harga-sgd")) || 0;
+
+     let totalAddonMyr = 0;
+     let totalAddonSgd = 0;
+     let addonList = [];
+
+  item.querySelectorAll(".addon-checkbox").forEach(cb => {
+  if (cb.checked) {
+    const addonMyr = parseFloat(cb.getAttribute("data-addon-myr")) || 0;
+    const addonSgd = parseFloat(cb.getAttribute("data-addon-sgd")) || 0;
+    totalAddonMyr += addonMyr;
+    totalAddonSgd += addonSgd;
+
+    const label = cb.closest("label");
+    if (label) {
+      addonList.push({
+        label: label.innerText.trim(),
+        value_myr: addonMyr.toFixed(2),
+        value_sgd: addonSgd.toFixed(2)
+      });
+    }
+  }
+});
+
+const totalMyr = hargaMyr + totalAddonMyr;
+const totalSgd = hargaSgd + totalAddonSgd;
+
+
+
+const produk = {
+  nama: nama,
+  img: img,
+  harga_asal_myr: `RM${hargaMyr.toFixed(2)}`,
+  harga_asal_sgd: `S$${hargaSgd.toFixed(2)}`,
+  harga_myr: `RM${totalMyr.toFixed(2)}`,
+  harga_sgd: `S$${totalSgd.toFixed(2)}`,
+ addon: addonList.length > 0 ? addonList : []
+};;
+
+
+      localStorage.setItem("troliProduk", JSON.stringify([produk]));
+      window.location.href = "cart.html";
+    });
+  });
+
+
+document.querySelectorAll('.btn-simpan').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest(".product-item");
+    animateToCart(card);
+    const unit = document.getElementById("unitHargaSelect").value;
+    const item = button.closest(".product-item");
+    const hargaAsas = parseFloat(item.getAttribute(`data-harga-${unit}`)) || 0;
+    const img = button.getAttribute("data-img");
+    let totalAddon = 0;
+    const addonList = [];
+
+    item.querySelectorAll(".addon-checkbox").forEach(cb => {
+      if (cb.checked) {
+        const addonValue = parseFloat(cb.getAttribute(`data-addon-${unit}`)) || 0;
+        totalAddon += addonValue;
+        addonList.push({
+          label: cb.closest("label").innerText.trim(),
+          value_myr: cb.getAttribute("data-addon-myr"),
+          value_sgd: cb.getAttribute("data-addon-sgd"),
+        });
+      }
+    });
+
+    const produk = {
+      nama: button.getAttribute("data-nama"),
+      img: img,
+      harga_asal_myr: `RM${item.getAttribute("data-harga-myr")}`,
+      harga_asal_sgd: `S$${item.getAttribute("data-harga-sgd")}`,
+      harga_myr: `RM${(parseFloat(item.getAttribute("data-harga-myr")) + totalAddon).toFixed(2)}`,
+      harga_sgd: `S$${(parseFloat(item.getAttribute("data-harga-sgd")) + totalAddon).toFixed(2)}`,
+      addon: addonList
+    };
+
+    let troli = JSON.parse(localStorage.getItem("troliProduk")) || [];
+    troli.push(produk);
+    localStorage.setItem("troliProduk", JSON.stringify(troli));
+    alert(`✅ Produk "${produk.nama}" disimpan ke troli.`);
+    updateTroliCount();
+  });
+});
+
+
+
+function updateTroliCount() {
+  const troli = JSON.parse(localStorage.getItem("troliProduk")) || [];
+  const count = document.getElementById("troliCount");
+  if (count) count.innerText = troli.length;
+}
+
+function animateToCart(sourceElement) {
+  const cartIcon = document.getElementById("troliIcon");
+  const image = sourceElement.querySelector("img");
+
+  if (!image || !cartIcon) return;
+
+  const rect = image.getBoundingClientRect();
+  const cartRect = cartIcon.getBoundingClientRect();
+
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+  const clone = image.cloneNode(true);
+  clone.style.position = "absolute";
+  clone.style.top = rect.top + scrollTop + "px";
+  clone.style.left = rect.left + scrollLeft + "px";
+  clone.style.width = rect.width + "px";
+  clone.style.height = rect.height + "px";
+  clone.style.transition = "transform 1.4s ease-in-out, opacity 1.4s ease-in-out";
+  clone.style.zIndex = "9999";
+  clone.style.opacity = "1";
+  clone.style.borderRadius = "12px";
+  clone.classList.add("fly-to-cart");
+
+  document.body.appendChild(clone);
+
+  requestAnimationFrame(() => {
+    const finalX = cartRect.left + scrollLeft - rect.left - scrollLeft;
+    const finalY = cartRect.top + scrollTop - rect.top - scrollTop;
+    clone.style.transform = `translate(${finalX}px, ${finalY}px) scale(0.3)`;
+    clone.style.opacity = "0";
+  });
+
+  setTimeout(() => {
+    document.body.removeChild(clone);
+  }, 1800);
+}
+
 </script>
-
-
 
 </body>
 </html>
