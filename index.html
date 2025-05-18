@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seni Wedding HT</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Parisienne&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="mobile-index.css" media="only screen and (max-width: 768px)">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +35,7 @@
 
   <!-- Logo -->
   <a href="index.html" class="mx-auto">
-    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="200">
   </a>
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
@@ -97,22 +98,23 @@
   <!-- Hero Section -->
   <section id="home" class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden" style="background-image: url('img/bg-blur.png');">
     <div class="hero-animate hover:scale-105 hover:shadow-xl ">
-      <h2 class="text-6xl md:text-6xl font-bold mb-4 text-[#d48c94] fancy-font" data-aos="fade-up">Seni untuk Cinta Anda</h2>
+      <h2 class="text-6xl md:text-6xl font-bold mb-4 text-[#d48c94] fancy-font" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="200">Seni untuk Cinta Anda</h2>
       <p class="text-lg md:text-xl mb-6" data-aos="fade-up">✨ Sentuhan eksklusif untuk hari bermakna anda ✨</p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
         <a href="#tempahan" class="bg-pink-400 hover:bg-[#eebec3] hover:scale-105 text-white px-6 py-3 rounded-full shadow transition">💌 Tempah Sekarang</a>
         <a href="SeniWedding-Catalog.pdf" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition">📖 MuatTurun Katalog</a>
+        <a href="#why" class="scroll-down">▼</a>
       </div>
     </div>
   </section>
 
 
-  <section class="bg-pink-50 py-16 px-6 text-center">
+  <section id="why" class="bg-pink-50 py-16 px-6 text-center">
   <h2 class="text-2xl font-bold mb-6" data-aos="fade-up">Kenapa Pilih Seni Wedding HT?</h2>
   <div class="grid md:grid-cols-3 gap-8">
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up" data-aos-delay="0">🎨 Design Eksklusif</h3><p class="text-sm text-gray-600">Setiap produk direka khas mengikut tema anda.</p></div>
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-right" data-aos-delay="100">📦 Siap Cepat</h3><p class="text-sm text-gray-600">Tempoh siap dalam masa 3-5 hari bekerja.</p></div>
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-left" data-aos-delay="200">💯 Jaminan Puas Hati</h3><p class="text-sm text-gray-600">Kami utamakan kepuasan pelanggan sepenuhnya.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="0">🎨 Design Eksklusif</h3><p class="text-sm text-gray-600">Setiap produk direka khas mengikut tema anda.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-delay="100">📦 Siap Cepat</h3><p class="text-sm text-gray-600">Tempoh siap dalam masa 3-5 hari bekerja.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-left"data-aos-easing="ease-in-out"  data-aos-delay="200">💯 Jaminan Puas Hati</h3><p class="text-sm text-gray-600">Kami utamakan kepuasan pelanggan sepenuhnya.</p></div>
   </div>
 </section>
 
@@ -122,6 +124,7 @@
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">✨ Testimoni Pelanggan Kami</h2>
 
     <div class="relative w-full">
+      <div class="wrapper overflow-x-hidden px-2"></div>
       <div class="scroll-track flex gap-4 animate-scroll-x px-3" data-aos="zoom-in" data-aos-delay="100">
         <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4 ">
           <img src="img/testimoni-1.png" class="rounded-md h-48 w-full object-cover mb-4">
@@ -131,40 +134,41 @@
           <img src="img/testimoni-2.png" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (2)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="200">
           <img src="img/testimoni-3.png" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (3)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="300">
           <img src="img/testimoni-4.png" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (4)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="400">
           <img src="img/testimoni-5.png" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (5)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="500">
           <img src="img/testimoni-6.png" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (6)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="600">
           <img src="img/produk/wedding-board/Mirror(B).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (B)</h3>
         </div>
-        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="700">
           <img src="img/produk/wedding-board/Mirror(C).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (C)</h3>
         </div>
-         <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+         <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="800">
           <img src="img/produk/mas-kahwin/MK-Wood(F).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">MK Wood (F)</h3>
         </div>
-         <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="100">
+         <div class="scroll-item min-w-[330px] flex-shrink-0 bg-gray-50 rounded-xl shadow p-4" data-aos="zoom-in" data-aos-delay="900">
           <img src="img/produk/wedding-board/Mirror(D).jpg" class="rounded-md h-48 w-full object-cover mb-2">
           <h3 class="font-semibold text-center text-sm">Wedding Board Mirror (D)</h3>
         </div>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Produk Pilihan Section (Polished) -->
@@ -172,9 +176,9 @@
     <h2 class="text-3xl md:text-4xl font-bold mb-4">🌟 Produk Pilihan</h2>
     <p class="mb-12 text-gray-600 max-w-xl mx-auto">Temui rekaan eksklusif yang memikat hati untuk momen terindah anda.</p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up" data-aos-duration="1000">
       <!-- Produk 1 -->
-      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 " data-aos="fade-up-right" data-aos-delay="100">
+      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 " data-aos="fade-up-right" data-aos-delay="200">
         <img src="img/produk/mas-kahwin/MK-Acrylic(A).jpg" alt="Frame Kaligrafi" class="rounded-t-2xl w-full h-64 object-cover">
         <div class="p-5">
           <h3 class="text-lg font-semibold mb-1 text-gray-800">Frame Kaligrafi</h3>
@@ -183,7 +187,7 @@
       </div>
 
       <!-- Produk 2 -->
-      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105" data-aos="fade-up" data-aos-delay="0">
+      <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
         <img src="img/produk/wedding-board/Acrylic(A).jpg" alt="Puzzle Tetamu" class="rounded-t-2xl w-full h-64 object-cover">
         <div class="p-5">
           <h3 class="text-lg font-semibold mb-1 text-gray-800">Wedding Board</h3>
