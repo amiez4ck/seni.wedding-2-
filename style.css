@@ -56,6 +56,15 @@ h1, h2, h3 {
 }
 
 
+.scroll-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+
 .scroll-track .scroll-item img {
     height: auto;
     max-height: 180px;
