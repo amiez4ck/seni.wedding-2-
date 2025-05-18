@@ -30,7 +30,7 @@
 <body class="bg-gradient-to-b from-[#fdfaf6] to-[#fff5f8] text-gray-800 overflow-x-hidden">
   <!-- Header / Navigation -->
  <header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
-  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+  <button class="mobile-nav-toggle block md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
 
   <!-- Logo -->
   <a href="index.html" class="mx-auto">
@@ -81,16 +81,18 @@
 
   </nav>
 
-</header>
-
-<!-- Mobile Nav Menu -->
-<nav id="mobileMenu" class="md:hidden">
+  <nav id="mobileMenu" class="md:hidden">
   <a href="index.html">Home</a>
   <a href="produk.html">Produk</a>
   <a href="catalog.html">Katalog</a>
   <a href="hubungi.html">Hubungi</a>
   <a href="cart.html">Troli 🛒</a>
 </nav>
+
+</header>
+
+<!-- Mobile Nav Menu -->
+
 
   <!-- Hero Section -->
   <section id="home" class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden" style="background-image: url('img/bg-blur.png');">
