@@ -26,47 +26,49 @@ h1, h2, h3 {
   font-family: 'Parisienne', cursive;
 }
 
-@keyframes scrollX {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll-x {
-  display: flex;
-  width: max-content;
-  animation: scrollX 18s linear infinite;
+#testimoni {
   position: relative;
+  overflow: hidden;
 }
 
-.scroll-track {
+.carousel-track {
+  display: flex;
+  will-change: transform;
+  gap: 1rem;
+  width: max-content;
   overflow-x: hidden;
-  max-width: 100%;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  will-change: transform;
+}
+
+.scroll-item {
+  min-width: clamp(220px, 30vw, 250px);
 }
 
 
-.scroll-track::before,
-.scroll-track::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 60px;
-  height: 100%;
-  z-index: 10;
-}
+.scroll-track .scroll-item img {
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    width: 100%;
+  }
 
-.scroll-track::before {
-  left: 0;
-  background: linear-gradient(to right, #fdfaf6, transparent);
-}
+  .scroll-track .scroll-item {
+    min-width: 220px;
+    flex-shrink: 0;
+  }
 
-.scroll-track::after {
-  right: 0;
-  background: linear-gradient(to left, #fdfaf6, transparent);
-}
 
 .produk-card {
   animation: fadeInUp 1s ease both;
@@ -74,24 +76,6 @@ h1, h2, h3 {
   cursor: pointer;
   overflow: hidden;
   position: relative;
-}
-
-.scroll-track .scroll-item {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-.scroll-track .scroll-item:hover {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 10px 20px rgba(212, 140, 148, 0.25);
-}
-
-.scroll-track .scroll-item img {
-  transition: transform 0.5s ease;
-}
-
-.scroll-track .scroll-item:hover img {
-  transform: scale(1.05);
 }
 
 
