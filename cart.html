@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Troli Saya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[#fdfaf6] text-gray-800 font-[Poppins]">
+  <header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
+  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+
+  <!-- Logo -->
+  <a href="index.html" class="mx-auto">
+    <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
+  </a>
+
+<!-- Mobile Nav Menu -->
+<nav id="mobileMenu" class="md:hidden">
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="catalog.html">Katalog</a>
+  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html">Troli 🛒</a>
+</nav>
+
+
+  <nav class="hidden md:flex items-center gap-6 text-sm relative">
+    <a href="index.html" class="hover:underline">Home</a>
+
+    <!-- Produk Dropdown (persistent) -->
+    <div class="relative group">
+      <button class="peer hover:underline font-semibold text-gray-700">Produk ▼</button>
+
+      <div class="absolute left-1/5 -translate-x-1/2 top-full mt-2 invisible peer-hover:visible group-hover:visible opacity-0 peer-hover:opacity-100 group-hover:opacity-100 bg-white shadow-xl rounded-lg p-6 gap-12 w-[720px] flex justify-between z-50 transition-all duration-300 pointer-events-auto">
+        <!-- Wedding Board -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Wedding Board</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="produk.html" class="hover:text-pink-500">Board Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Mirror</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Board Acrylic</a></li>
+          </ul>
+        </div>
+
+        <!-- Mas Kahwin -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-700 mb-2">Mas Kahwin</h4>
+          <ul class="space-y-1 text-sm text-gray-600">
+            <li><a href="produk.html" class="hover:text-pink-500">Wood</a></li>
+            <li><a href="produk.html" class="hover:text-pink-500">Acrylic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <li><a href="produk.html" class="text-sm font-semibold text-gray-700 mb-2 hover:text-pink-500">Guest PuzzleBooks</a></li>
+          <ul class="space-y-1 text-sm text-gray-600">
+          </ul>
+        </div>
+      </div>
+  
+
+    <a href="catalog.html" class="hover:underline">Katalog</a>
+    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="cart.html" class="relative">
+    🛒
+    <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
+    </a>
+
+  </nav>
+</div>
+</header>
+
+  <section class="max-w-4xl mx-auto px-6 py-12">
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-3xl font-bold text-pink-600">🛒 Troli Pembelian Anda</h1>
+      <a href="produk.html" class="text-sm text-pink-500 hover:underline">← Kembali ke Produk</a>
+    </div>
+
+    <ul id="senaraiTroli" class="space-y-4 mb-6"></ul>
+
+    <div class="flex justify-between items-center border-t pt-4 mt-8">
+      <p class="text-lg font-semibold text-sm text-gray-500 mb-1"">Jumlah Keseluruhan: <span id="totalHarga" class="text-pink-600 font-bold">RM0.00</span></p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-6 mt-8">
+      <h2 class="text-xl font-semibold text-pink-600 mb-4">Maklumat Pelanggan</h2>
+
+      <form id="checkoutForm" class="space-y-4">
+        <input type="text" id="nama" placeholder="Nama Penuh" class="w-full border px-3 py-2 rounded" required>
+        <input type="email" id="email" placeholder="Alamat Email" class="w-full border px-3 py-2 rounded" required>
+
+        <select id="lokasi" class="w-full border px-3 py-2 rounded" required>
+          <option value="">Pilih Negara</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Singapore">Singapore</option>
+        </select>
+
+        <label class="block font-medium mt-4">Warna Dasar (Pilih salah satu):</label>
+        <select id="warnaDasar" class="w-full border px-3 py-2 rounded">
+          <option value="Putih">Putih</option>
+          <option value="Hitam">Hitam</option>
+          <option value="Gold">Gold</option>
+          <option value="Rose Gold">Rose Gold</option>
+          <option value="Coklat Kayu">Coklat Kayu</option>
+        </select>
+
+        <label class="block font-medium mt-4">Warna Pilihan Lain (Jika ada):</label>
+        <input type="text" id="warnaCustom" placeholder="Contoh: Dusty pink + beige" class="w-full border px-3 py-2 rounded">
+
+        <label class="block font-medium mt-4">Tarikh Diperlukan:</label>
+        <input type="date" id="tarikhPerlu" class="w-full border px-3 py-2 rounded" required>
+
+        <label class="block font-medium mt-4">Catatan Tambahan (Opsyenal):</label>
+        <textarea id="catatan" rows="3" class="w-full border px-3 py-2 rounded" placeholder="Contoh: Perlu segera, atau pos sebelum tarikh tertentu."></textarea>
+
+        <div class="flex justify-end gap-4">
+          <button type="button" onclick="kosongkanTroli()" class="px-4 py-2 border border-red-500 text-red-500 rounded hover:bg-red-100">Kosongkan Troli</button>
+          <button type="submit" class="px-4 py-2 bg-pink-600 text-white rounded hover:bg-pink-700">Checkout via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const troli = JSON.parse(localStorage.getItem("troliProduk")) || [];
+    const senaraiContainer = document.getElementById("senaraiTroli");
+    const totalHargaEl = document.getElementById("totalHarga");
+
+    function paparkanTroli() {
+      const troli = JSON.parse(localStorage.getItem("troliProduk")) || [];
+      senaraiContainer.innerHTML = "";
+      let jumlahMyr = 0;
+      let jumlahSgd = 0;
+
+      if (troli.length === 0) {
+        senaraiContainer.innerHTML = "<p class='text-gray-500'>Troli anda kosong.</p>";
+        totalHargaEl.textContent = "RM0.00";
+        return;
+      }
+
+      
+  troli.forEach((item, index) => {
+  const hargaMyr = parseFloat(item.harga_myr?.replace("RM", "") || "0");
+  const hargaSgd = parseFloat(item.harga_sgd?.replace("S$", "") || "0");
+
+jumlahMyr += hargaMyr;
+jumlahSgd += hargaSgd;
+
+  
+  let totalAddonMyr = 0;
+  let totalAddonSgd = 0;
+
+  if (Array.isArray(item.addon) && item.addon.length > 0) {
+    item.addon.forEach(add => {
+      totalAddonMyr += parseFloat(add.value_myr || 0);
+      totalAddonSgd += parseFloat(add.value_sgd || 0);
+    });
+  }
+
+  const addonHTML = (item.addon && item.addon.length > 0)
+    ? item.addon.map((a, i) => `
+        <li class="text-sm text-gray-500 flex justify-between">
+          <span>${a.label}</span>
+          <button onclick="buangAddon(${index}, ${i})" class="text-xs text-red-500 hover:underline">Buang</button>
+        </li>`).join('')
+    : "<li class='text-sm text-gray-400'>Tiada Add-on</li>";
+
+  const itemHtml = `
+    <li class="bg-white shadow rounded p-4 flex items-start gap-4">
+      <img src="${item.img}" alt="${item.nama}" class="w-24 h-24 object-cover rounded-md">
+      <div class="flex-1">
+        <p class="font-semibold">${item.nama}</p>
+        <p class="text-sm text-gray-500">Harga Asal: ${item.harga_asal_myr} / ${item.harga_asal_sgd}</p>
+        <p class="text-sm text-gray-500">Jumlah Add-On: RM${totalAddonMyr.toFixed(2)} / S$${totalAddonSgd.toFixed(2)}</p>
+        <p class="text-sm text-pink-600 font-semibold">Jumlah Akhir: ${item.harga_myr} / ${item.harga_sgd}</p>
+        <p class="text-sm font-medium mt-2">Add-On:</p>
+        <ul>${addonHTML}</ul>
+      </div>
+      <button onclick="padamProduk(${index})" class="text-sm text-red-500 hover:underline">Padam</button>
+    </li>
+  `;
+
+  senaraiContainer.innerHTML += itemHtml;
+});
+
+
+     totalHargaEl.textContent = `RM${jumlahMyr.toFixed(2)} / S$${jumlahSgd.toFixed(2)}`;
+    }
+
+    function padamProduk(index) {
+      troli.splice(index, 1);
+      localStorage.setItem("troliProduk", JSON.stringify(troli));
+      paparkanTroli();
+    }
+
+    function kosongkanTroli() {
+      if (confirm("Anda pasti mahu kosongkan troli?")) {
+        localStorage.removeItem("troliProduk");
+        location.reload();
+      }
+    }
+
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const lokasi = document.getElementById("lokasi").value;
+      const warnaDasar = document.getElementById("warnaDasar").value;
+      const warnaCustom = document.getElementById("warnaCustom").value || "Tiada";
+      const catatan = document.getElementById("catatan").value || "Tiada";
+      const tarikh = document.getElementById("tarikhPerlu").value || "Tidak ditentukan";
+
+      if (troli.length === 0) {
+        alert("Troli anda kosong.");
+        return;
+      }
+
+      let mesej = `Tempahan Baru daripada ${nama} (${email})%0A`;
+      mesej += `Lokasi: ${lokasi}%0A`;
+      mesej += `Warna Dasar: ${warnaDasar}%0A`;
+      mesej += `Warna Custom: ${warnaCustom}%0A`;
+      mesej += `Tarikh Diperlukan: ${tarikh}%0A`;
+      mesej += `Catatan Pelanggan: ${catatan}%0A%0A`;
+
+      mesej += `Produk Dipilih:%0A`;
+      troli.forEach((item, i) => {
+        mesej += `${i + 1}. ${item.nama}%0A➡️ Harga MYR: ${item.harga_myr || 'N/A'}%0A➡️ Harga SGD: ${item.harga_sgd || 'N/A'}%0A%0A`;
+      });
+
+      mesej += `*Sila sahkan maklumat tempahan anda 😊*`;
+
+      const whatsappLink = `https://wa.me/60123456789?text=${encodeURIComponent(mesej)}`;
+      window.open(whatsappLink, "_blank");
+      localStorage.removeItem("troliProduk");
+    });
+
+
+function buangAddon(indexProduk, indexAddon) {
+  const troliSemasa = JSON.parse(localStorage.getItem("troliProduk")) || [];
+  const produk = troliSemasa[indexProduk];
+
+  if (!produk || !Array.isArray(produk.addon) || !produk.addon[indexAddon]) return;
+
+  const addon = produk.addon[indexAddon];
+
+  const nilaiMyr = parseFloat(addon.value_myr || 0);
+  const nilaiSgd = parseFloat(addon.value_sgd || 0);
+
+  const hargaMyrLama = parseFloat(produk.harga_myr.replace("RM", "")) || 0;
+  const hargaSgdLama = parseFloat(produk.harga_sgd.replace("S$", "")) || 0;
+
+  produk.harga_myr = `RM${(hargaMyrLama - nilaiMyr).toFixed(2)}`;
+  produk.harga_sgd = `S$${(hargaSgdLama - nilaiSgd).toFixed(2)}`;
+
+  produk.addon.splice(indexAddon, 1);
+
+  troliSemasa[indexProduk] = produk;
+
+  localStorage.setItem("troliProduk", JSON.stringify(troliSemasa));
+
+  // ✅ Panggil semula fungsi utama untuk kemas kini paparan
+  paparkanTroli();
+}
+
+
+paparkanTroli();
+
+
+  </script>
+</body>
+</html>
