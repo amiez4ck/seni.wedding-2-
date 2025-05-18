@@ -1,3 +1,16 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding-top: 113px; /* beri ruang supaya tidak kena tindih */
+}
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -28,6 +41,12 @@ h1, h2, h3 {
   animation: scrollX 40s linear infinite;
   position: relative;
 }
+
+.scroll-track {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 
 .scroll-track::before,
 .scroll-track::after {
@@ -88,6 +107,23 @@ h1, h2, h3 {
 .produk-card:hover img {
   transform: scale(1.05);
 }
+
+.cta-button {
+  background: linear-gradient(to right, #f3d2c1, #f5c5cd);
+  background-color: #f3d2c1;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  background-color: #e8b8a3;
+  transform: scale(1.05);
+}
+
 
 
 button, .cta-btn, a.btn {
