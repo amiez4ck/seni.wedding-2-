@@ -4,27 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Troli Saya</title>
+  <link rel="stylesheet" href="mobile-cart.css" media="only screen and (max-width: 768px)">
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body class="bg-[#fdfaf6] text-gray-800 font-[Poppins]">
   <header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
-  <button class="mobile-nav-toggle" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
+   <button class="mobile-nav-toggle block md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('show')">☰</button>
 
   <!-- Logo -->
   <a href="index.html" class="mx-auto">
     <img src="img/logo-.png" alt="Logo Seni Wedding HT" class="h-14 md:h-20 object-contain" data-aos="zoom-in" data-aos-delay="100">
   </a>
-
-<!-- Mobile Nav Menu -->
-<nav id="mobileMenu" class="md:hidden">
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
-</nav>
-
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
     <a href="index.html" class="hover:underline">Home</a>
@@ -70,6 +61,15 @@
 
   </nav>
 </div>
+
+  <nav id="mobileMenu" class="md:hidden">
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="catalog.html">Katalog</a>
+  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html">Troli 🛒</a>
+</nav>
+
 </header>
 
   <section class="max-w-4xl mx-auto px-6 py-12">
