@@ -8,13 +8,16 @@ body {
 }
 
 header {
-  display: block;
+  display: flex;
   position: relative;
   padding: 1rem 1rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+header .mx-auto {
+    margin: 0 auto;
+  }
 
 .mobile-nav-toggle {
   display: block;
