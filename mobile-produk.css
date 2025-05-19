@@ -149,8 +149,8 @@ nav.show {
   }
 
   .produk-slider .product-item {
-    min-width: 94vw;
-    max-width: 94vw;
+    min-width: 90vw;
+    max-width: 90vw;
     margin: 0 auto;
     margin-right: 1rem;
     flex-shrink: 0;
