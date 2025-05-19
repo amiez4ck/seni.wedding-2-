@@ -156,6 +156,13 @@ nav.show {
     padding: 0.5rem;
   }
 
+  .product-item {
+  min-height: 480px; /* atau ikut keperluan visual kamu */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
   .produk-slider-wrapper {
   position: relative;
 }
