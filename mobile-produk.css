@@ -133,10 +133,9 @@ nav.show {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    gap: 0.3rem;
+    gap: 0.5rem;
     padding-bottom: 1rem;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
   .produk-slider::-webkit-scrollbar {
@@ -144,22 +143,29 @@ nav.show {
   }
 
   .produk-slider .product-item {
-    min-width: 155px;
+    min-width: 95%;
+    margin: 0 auto;
+    margin-right: 1rem;
     flex-shrink: 0;
     scroll-snap-align: start;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   .produk-slider .product-item img {
-    height: 190px;
+    width: 100%;
+    height: 180px;
+    max-height: 180px;
     object-fit: contain;
     background-color: #fff;
-    padding: 0.25rem;
+    padding: 0;
+    margin-bottom: 0.75rem;
   }
 
  .produk-slider-wrapper {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  overflow-x: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 
