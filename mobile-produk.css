@@ -1,7 +1,7 @@
 
 @media only screen and (max-width: 768px) {
   body {
-    padding: 0 1rem;
+    padding: 0;
   }
 
 header {
@@ -135,8 +135,8 @@ nav.show {
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
 
   .produk-slider::-webkit-scrollbar {
@@ -144,7 +144,7 @@ nav.show {
   }
 
   .produk-slider .product-item {
-    min-width: 270px;
+    min-width: 230px;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
@@ -155,13 +155,6 @@ nav.show {
     background-color: #fff;
     padding: 0.5rem;
   }
-
-  .product-item {
-  min-height: 480px; /* atau ikut keperluan visual kamu */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
   .produk-slider-wrapper {
   position: relative;
