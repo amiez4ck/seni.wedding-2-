@@ -109,7 +109,7 @@ nav.show {
   .produk-card img,
   .scroll-track img {
     height: 240px !important;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   /* Scroll section padding */
@@ -135,8 +135,8 @@ nav.show {
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding-bottom: 1rem;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .produk-slider::-webkit-scrollbar {
@@ -144,16 +144,16 @@ nav.show {
   }
 
   .produk-slider .product-item {
-    min-width: 230px;
+    min-width: 180px;
     flex-shrink: 0;
     scroll-snap-align: start;
   }
   
   .produk-slider .product-item img {
-    height: 250px;
+    height: 190px;
     object-fit: contain;
     background-color: #fff;
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
 
   .produk-slider-wrapper {
