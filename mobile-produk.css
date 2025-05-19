@@ -148,6 +148,13 @@ nav.show {
     flex-shrink: 0;
     scroll-snap-align: start;
   }
+  
+  .produk-slider .product-item img {
+    height: 250px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 0.5rem;
+  }
 
   .produk-slider-wrapper {
   position: relative;
