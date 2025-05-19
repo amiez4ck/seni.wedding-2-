@@ -47,6 +47,12 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
+.active-product {
+  border: 2px solid #f472b6;
+  transform: scale(1.02);
+}
+
+
 
   </style>
 </head>
@@ -110,7 +116,7 @@
   <a href="produk.html">Produk</a>
   <a href="catalog.html">Katalog</a>
   <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
+  <a href="cart.html" id="troliIcon">Troli 🛒</a>
 </nav>
 
 </header>
@@ -180,6 +186,7 @@
 
   <img src="img/produk/wedding-board/Wood(A).jpg" alt="WB Wood A" 
   class="w-full h-48 object-contain rounded-md mb-4" />
+
 
   <p class="text-sm text-gray-500 mb-1">Wood (A)</p>
   <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
@@ -1162,7 +1169,56 @@ function animateToCart(sourceElement) {
   }, 1800);
 }
 
+
+document.querySelectorAll('.produk-slider').forEach(slider => {
+  let isScrolling;
+
+  slider.addEventListener('scroll', () => {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      const items = slider.querySelectorAll('.product-item');
+      let closestItem = items[0];
+      let closestDistance = Math.abs(slider.scrollLeft - items[0].offsetLeft);
+
+      items.forEach(item => {
+        const distance = Math.abs(slider.scrollLeft - item.offsetLeft);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestItem = item;
+        }
+      });
+
+      slider.scrollTo({
+        left: closestItem.offsetLeft,
+        behavior: 'smooth'
+      });
+    }, 100); // delay until scroll stops
+  });
+});
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active-product');
+    } else {
+      entry.target.classList.remove('active-product');
+    }
+  });
+}, {
+  root: document.querySelector('.produk-slider'),
+  threshold: 0.6
+});
+
+document.querySelectorAll('.produk-slider .product-item').forEach(item => {
+  observer.observe(item);
+});
+
+
 </script>
+
+
 
 </body>
 </html>
