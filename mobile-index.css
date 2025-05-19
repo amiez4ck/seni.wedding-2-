@@ -142,10 +142,12 @@
 
   .scroll-track .scroll-item img {
     height: auto;
-    max-height: 220px;
+    max-height: 240px;
     object-fit: contain;
     border-radius: 12px;
     width: 100%;
+    background-color: white;
+    padding: 0.5rem;
     image-rendering: -webkit-optimize-contrast;
   }
 
