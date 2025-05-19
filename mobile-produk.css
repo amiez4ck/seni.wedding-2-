@@ -1,210 +1,222 @@
+☰
+Logo Seni Wedding HT
+💍 Produk Eksklusif Perkahwinan
+Paparan rekaan istimewa untuk kenangan terindah anda.
 
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 0;
-  }
+Kategori: 
+Semua
+Bahan: 
+Semua
+Julat Harga: 
+Semua
+Unit Harga: 
+MYR
+Wedding Board - Wood
+⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️
 
-header {
-  display: block;
-  position: relative;
-  padding: 1rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+WB Wood A
+Wood (A)
 
-.mobile-nav-toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: #d48c94;
-  position: absolute;
-  left: 1rem;
-  top: 1.2rem;
-  z-index: 60;
-}
+3D + Engrave + Laser Cut
+Size: 18 Inchi x 24 Inchi
 
-header .logo-center {
-  margin: 0 auto;
-  height: 3.5rem;
-}
+ Tambah Stand (+RM40)
+RM190.00
 
-nav {
-  flex-direction: column;
-  background-color: white;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  z-index: 55;
-  padding: 1.2rem;
-  text-align: center;
-  animation: slideDown 0.3s ease forwards;
-}
+Simpan ke Troli Bayar Sekarang
+WB Wood B
+Wood (B)
 
-nav a {
-  padding: 0.8rem 0;
-  font-size: 1rem;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  display: block;
-}
+3D + Engrave + Laser Cut
+Size: 18 Inchi x 24 Inchi
 
-nav.show {
-  display: flex;
-}
+ Tambah Stand (+RM40)
+RM190.00
 
-#mobileMenu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    box-shadow: 0 8px 20px rgba(1, 2, 2, 0.10);
-    z-index: 55;
-    padding: 1.2rem;
-    text-align: center;
-    animation: slideDown 0.8s ease forwards;
-}
+Simpan ke Troli Bayar Sekarang
+Wedding Board - Mirror
+⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️
 
-#mobileMenu.show {
-  display: flex;
-}
+WB Mirror A
+Mirror (A)
 
- #mobileMenu a {
-    padding: 0.8rem 0;
-    font-size: 1rem;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    display: block;
-  }
+3D Sticker + Laser Cut
+Size: 48 Inchi x 16.8 Inchi
 
-  /* Hero text center & shrink font */
-  .hero-animate h2 {
-    font-size: 1.75rem !important;
-    line-height: 1.2;
-  }
+ Tambah Stand (+RM40)
+RM290.00
 
-  .hero-animate p {
-    font-size: 1rem !important;
-  }
+Simpan ke Troli Bayar Sekarang
+WB Mirror B
+Mirror (B)
 
-  /* Produk grid 1 kolum */
-  .grid-cols-2,
-  .grid-cols-3,
-  .sm\\:grid-cols-2,
-  .lg\\:grid-cols-3 {
-    grid-template-columns: 1fr !important;
-  }
+3D Sticker + Laser Cut
+Size: 18 Inchi x 24 Inchi
 
-  /* Produk kad padding kecil */
-  .produk-card {
-    padding: 1rem !important;
-  }
+ Tambah Stand (+RM40)
+RM290.00
 
-  /* Gambar produk kecil */
-  .produk-card img,
-  .scroll-track img {
-    height: 240px !important;
-    object-fit: contain;
-  }
+Simpan ke Troli Bayar Sekarang
+WB Mirror C
+Mirror (C)
 
-  /* Scroll section padding */
-  .scroll-track {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    gap: 1rem !important;
-  }
+3D Sticker + Laser Cut
+Size: 48 Inchi x 16.8 Inchi
 
-  /* Dropdown menu penuh skrin kecil */
-  .dropdown-menu,
-  .relative > div[style*="absolute"] {
-    width: 100% !important;
-    left: 0 !important;
-    transform: none !important;
-  }
+ Tambah Stand (+RM40)
+RM290.00
 
-  .produk-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
+Simpan ke Troli Bayar Sekarang
+WB Mirror D
+Mirror (D)
 
-  .produk-slider::-webkit-scrollbar {
-    display: none;
-  }
+3D Sticker + Laser Cut
+Size: 18 Inchi x 24 Inchi
 
-  .produk-slider .product-item {
-    min-width: 180px;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-  }
-  
-  .produk-slider .product-item img {
-    height: 190px;
-    object-fit: contain;
-    background-color: #fff;
-    padding: 0.25rem;
-  }
+ Tambah Stand (+RM40)
+RM170.00
 
-  .produk-slider-wrapper {
-  position: relative;
-}
+Simpan ke Troli Bayar Sekarang
+Wedding Board - Acrylic
+⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️
 
-.produk-slider::before,
-.produk-slider::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 30px;
-  height: 100%;
-  z-index: 10;
-  pointer-events: none;
-}
+WB Acrylic A
+Acrylic (A)
 
-.produk-slider::before {
-  left: 0;
-  background: linear-gradient(to right, #fdfaf6, transparent);
-}
+3D Sticker + Laser Cut
+Size: 18 Inchi x 24 Inchi
 
-.produk-slider::after {
-  right: 0;
-  background: linear-gradient(to left, #fdfaf6, transparent);
-}
+ Tambah Stand (+RM40)
+ Tambah Bunga (+RM270)
+RM170.00
 
-  /* Button lebih responsif */
-  button,
-  .cta-btn,
-  a.btn {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
+Simpan ke Troli Bayar Sekarang
+WB Acrylic B
+Acrylic (B)
 
-  /* Header spacing */
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
+UV Sticker + Dummy Dinar
+Size: 10.5cm x 14.8cm
 
+ Tambah Stand (+RM40)
+ Tambah Bunga (+RM270)
+RM170.00
 
-  @keyframes slideDown {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-}
+Simpan ke Troli Bayar Sekarang
+Mas Kahwin - Acrylic
+⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️
+
+MK Acrylic A
+MK Acrylic (A)
+
+UV Sticker + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM100.00
+
+Simpan ke Troli Bayar Sekarang
+MK Acrylic B
+MK Acrylic(B)
+
+UV Sticker + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM95.00
+
+Simpan ke Troli Bayar Sekarang
+MK Acrylic C
+MK Acrylic(C)
+
+UV Sticker + Dummy Dinar + Bunga
+Size: 10.5cm x 14.8cm
+
+RM280.00
+
+Simpan ke Troli Bayar Sekarang
+MK Acrylic D
+MK (D)
+
+UV Sticker + Dummy Dinar + Bunga
+Size: 10.5cm x 14.8cm
+
+RM280.00
+
+Simpan ke Troli Bayar Sekarang
+Mas Kahwin - Wood
+⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️
+
+MK Wood A
+MK Wood (A)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM89.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood B
+MK Wood (B)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM80.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood C
+MK Wood (C)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM89.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood D
+MK Wood (D)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM89.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood E
+MK Wood(D)
+
+3D + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM90.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood F
+MK Wood (F)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 10.5cm x 14.8cm
+
+RM250.00
+
+Simpan ke Troli Bayar Sekarang
+MK Wood G
+MK Wood (G)
+
+3D Wood + Engraving + Dummy Dinar
+Size: 25cm x 25cm
+
+RM69.00
+
+Simpan ke Troli Bayar Sekarang
+Guest Puzzlebooks
+Guest Puzzlebook
+Guest Puzzlebook
+
+MDF Engraved Puzzle
+Size: 24 Inchi x 18 Inchi
+
+96 Pieces Puzzle + Marker Stand
+
+ Tambah Stand (+RM40)
+RM300.00
+
+Simpan ke Troli Bayar Sekarang
