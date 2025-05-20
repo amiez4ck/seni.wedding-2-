@@ -67,10 +67,10 @@
   </a>
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="produk.html" class="hover:underline">Produk</a>
-    <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="index.html" class="hover:underline" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+    <a href="produk.html" class="hover:underline" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+    <a href="catalog.html" class="hover:underline" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+    <a href="hubungi.html" class="hover:underline" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
     <a href="cart.html" class="relative">
     🛒
     <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
@@ -80,49 +80,56 @@
 </div>
 
 <nav id="mobileMenu" class="md:hidden">
-  <a href="cart.html" id="troliIcon">Troli 🛒</a>
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
+  <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+  <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+  <a href="catalog.html" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+  <a href="hubungi.html" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
 </nav>
+
+<div class="language-toggle flex gap-2 text-sm items-center">
+  <button onclick="setLanguage('my')" class="py-1 px-2 border rounded text-pink-500">MY</button>
+  <span>|</span>
+  <button onclick="setLanguage('en')" class="py-1 px-2 border rounded text-pink-500">EN</button>
+</div>
+
 
 </header>
 
 <!-- Produk Section -->
 <section class="text-center py-16 px-4">
-  <h2 class="text-3xl md:text-4xl font-bold text-pink-500 mb-4">💍 Produk Eksklusif Perkahwinan</h2>
-  <p class="max-w-2xl mx-auto text-gray-600 mb-10">Paparan rekaan istimewa untuk kenangan terindah anda.</p>
+  <h2 class="text-3xl md:text-4xl font-bold text-pink-500 mb-4" data-lang-my="💍 Produk Eksklusif Perkahwinan" data-lang-en="💍 Exclusive Wedding Products">💍 Produk Eksklusif Perkahwinan</h2>
+  <p class="max-w-2xl mx-auto text-gray-600 mb-10" data-lang-my="Paparan rekaan istimewa untuk kenangan terindah anda." data-lang-en="Special design showcase for your unforgettable moments.">Paparan rekaan istimewa untuk kenangan terindah anda.</p>
 
 <div class="mb-4">
-  <label for="filter-kategori" class="font-medium text-sm mr-2">Kategori:</label>
+  <label for="filter-kategori" class="font-medium text-sm mr-2" data-lang-my="Kategori:" data-lang-en="Category:">Kategori:</label>
   <select id="filter-kategori" class="border rounded px-3 py-1 text-sm">
-    <option value="all">Semua</option>
-    <option value="wedding-board">Wedding Board</option>
-    <option value="mas-kahwin">Mas Kahwin</option>
-    <option value="guestbook">Guest Puzzlebook</option>
+    <option value="all" data-lang-my="Semua" data-lang-en="All">Semua</option>
+    <option value="wedding-board" data-lang-my="Wedding Board" data-lang-en="Wedding Board">Wedding Board</option>
+    <option value="mas-kahwin" data-lang-my="Mas Kahwin" data-lang-en="Marriage Gift">Mas Kahwin</option>
+    <option value="guestbook" data-lang-my="Guest Puzzlebook" data-lang-en="Guest Puzzlebook">Guest Puzzlebook</option>
   </select>
 </div>
 
 <!-- Bahan Filter -->
 <div class="mb-4">
-  <label for="filter-bahan" class="font-medium text-sm mr-2">Bahan:</label>
+  <label for="filter-bahan" class="font-medium text-sm mr-2" data-lang-my="Bahan" data-lang-en="Material:">Bahan:</label>
   <select id="filter-bahan" class="border rounded px-3 py-1 text-sm">
-    <option value="all">Semua</option>
-    <option value="wood">Wood</option>
-    <option value="mirror">Mirror</option>
-    <option value="acrylic">Acrylic</option>
+    <option value="all" data-lang-my="Semua" data-lang-en="All">Semua</option>
+    <option value="wood" data-lang-my="Kayu" data-lang-en="Wood">Wood>Wood</option>
+    <option value="mirror" data-lang-my="Cermin" data-lang-en="Mirror">Mirror</option>
+    <option value="acrylic" data-lang-my="akrilik" data-lang-en="Acrylic">Acrylic</option>
   </select>
 </div>
 
 <section>
 <div class="mb-4">
-  <label for="filter-harga" class="font-medium text-sm mr-2">Julat Harga:</label>
+  <label for="filter-harga" class="font-medium text-sm mr-2"  data-lang-my="Julat Harga:" data-lang-en="Price Range:">Julat Harga:</label>
   <select id="filter-harga" class="border rounded px-3 py-1 text-sm">
-    <option value="all">Semua</option>
-    <option value="low">RM0 - RM49</option>
-    <option value="mid">RM50 - RM99</option>
-    <option value="high">RM100+</option>
+    <option value="all" data-lang-my="Semua" data-lang-en="All">Semua</option>
+    <option value="low" data-lang-my="RM0 - RM49" data-lang-en="RM0 - RM49">RM0 - RM49</option>
+    <option value="mid"  data-lang-my="RM50 - RM99" data-lang-en="RM50 - RM99">RM50 - RM99</option>
+    <option value="high"  data-lang-my="RM100+" data-lang-en="RM100+">RM100+</option>
   </select>
 </div>
 </section>
@@ -130,18 +137,18 @@
 
 <section class="py-8 mx-auto">
   <div class="mb-6">
-  <label for="unitHargaSelect" class="font-semibold mr-2">Unit Harga:</label>
+  <label for="unitHargaSelect" class="font-semibold mr-2" data-lang-my="Unit Harga:" data-lang-en="Currency:">Unit Harga:</label>
   <select id="unitHargaSelect" class="border rounded px-3 py-1 text-sm">
-    <option value="myr" selected>MYR</option>
-    <option value="sgd">SGD</option>
+    <option value="myr" selected data-lang-my="MYR" data-lang-en="MYR">MYR</option>
+    <option value="sgd" data-lang-my="SGD" data-lang-en="SGD">SGD</option>
   </select>
 </div>
 </section>
 
 
 <div class="product-section" data-kategori="wedding-board wood">
-  <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Wood</h2>
-  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+  <h2 class="text-2xl font-bold text-pink-600 mb-6" data-lang-my="Wedding Board" data-lang-en="Wedding Board">Wedding Board - Wood</h2>
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden" data-lang-my="⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️" data-lang-en="⬅️ swipe left or right to see more products ➡️">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
   <div class=" produk-slider-wrapper">
   <div class="produk-slider">
 
@@ -155,30 +162,35 @@
   class="w-full h-48 object-contain rounded-md mb-4" />
 
 
-  <p class="text-sm text-gray-500 mb-1">Wood (A)</p>
-  <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
-  <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+  <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (A)" data-lang-en="Wood (A)">Wood (A)</p>
+  <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D 3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+  <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
   <!-- Checkbox Add-On -->
     <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>
+      (+<span class="addon-amount" data-lang-my="RM40" data-lang-en="RM40">RM40</span>)
     </label>
 
-  <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+  <p class="harga-final text-pink-600 font-bold mt-3" data-lang-my="RM190.00" data-lang-en="RM190.00">RM190.00</p>
 
   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
         data-nama="Wedding Board - Wood (A)"
         data-harga-myr="190"
         data-harga-sgd="58"
-        data-img="img/produk/wedding-board/Wood(A).jpg">
-  Simpan ke Troli
+        data-img="img/produk/wedding-board/Wood(A).jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan Ke Troli
 </button>
 
 <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
         data-nama="Wedding Board - Wood (A)"
         data-harga-myr="190"
         data-harga-sgd="58"
-        data-img="img/produk/wedding-board/Wood(A).jpg">
+        data-img="img/produk/wedding-board/Wood(A).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 </div>
@@ -192,13 +204,14 @@
 
       <img src="img/produk/wedding-board/Wood(B).jpg" alt="WB Wood B" 
       class="w-full h-48 object-contain rounded-md mb-4" />
-      <p class="text-sm text-gray-500 mb-1">Wood (B)</p>
-      <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engrave + Laser Cut</h3>
-      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (B)" data-lang-en="Wood (B)">Wood (B)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
       
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>
+      (+<span class="addon-amount">RM40</span>)
       </label>
 
       <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
@@ -207,15 +220,715 @@
         data-nama="Wedding Board - Wood (B)"
         data-harga-myr="190"
         data-harga-sgd="58"
-        data-img="img/produk/wedding-board/Wood(B).jpg">
+        data-img="img/produk/wedding-board/Wood(B).jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
   Simpan ke Troli
 </button>
 
 <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
-        data-nama="Wedding Board - Wood (A)"
+        data-nama="Wedding Board - Wood (B)"
         data-harga-myr="190"
         data-harga-sgd="58"
-        data-img="img/produk/wedding-board/Wood(B).jpg">
+        data-img="img/produk/wedding-board/Wood(B).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board 1.jpg" alt="WB Wood C" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-en="Wood (C)" data-lang-my="Wood (C)">Wood (C)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>
+       (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (C)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board 1.jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (C)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board 1.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board 2.jpg" alt="WB Wood D" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (D)" data-lang-en="Wood (D)">Wood (D)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>
+       (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (D)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board 2.jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (D)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board 2.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 3.jpg" alt="WB Wood E" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (E)" data-lang-en="Wood (E)">Wood (E)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand </span>
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (E)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 3.jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (E)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 3.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 4.jpg" alt="WB Wood B" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (F)" data-lang-en="Wood (F)">Wood (F)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (F)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 3.jpg"
+        data-lang-my="Simpan Ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (F)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 3.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 4.jpg" alt="WB Wood G" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (G)" data-lang-en="Wood (G)">Wood (G)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (G)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 4.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (G)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 4.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 5.jpg" alt="WB Wood H" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (H)" data-lang-en="Wood (H)">Wood (H)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (H)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 5.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (H)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 5.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 6.jpg" alt="WB Wood I" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (I)" data-lang-en="Wood (I)">Wood (I)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (I)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 6.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (I)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 6.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 7.jpg" alt="WB Wood J" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (J)" data-lang-en="Wood (J)">Wood (J)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (J)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 7.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (J)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 7.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 8.jpg" alt="WB Wood K" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (K)" data-lang-en="Wood (K)">Wood (K)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+     <span class="addon-label" data-lang-my=" Tambah Stand" data-lang-en="Add On Stand" (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (K)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 8.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (K)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 8.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 9.jpg" alt="WB Wood L" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (L)" data-lang-en="Wood (L)">Wood (L)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (L)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 9.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (L)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 9.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 10.jpg" alt="WB Wood M" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (M)" data-lang-en="Wood (M)">Wood (M)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (M)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 10.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (M)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 10.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 11.jpg" alt="WB Wood N" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (N)" data-lang-en="Wood (N)">Wood (N)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (N)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 11.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (N)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 11.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 12.jpg" alt="WB Wood O" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (O)" data-lang-en="Wood (O)">Wood (O)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (O)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 12.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (O)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 12.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 13.jpg" alt="WB Wood P" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (P)" data-lang-en="Wood (P)">Wood (P)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (P)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 13.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (P)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 13.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 14.jpg" alt="WB Wood Q" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (Q)" data-lang-en="Wood (Q)">Wood (Q)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add To Cart">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (Q)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 14.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (Q)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 14.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+    <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 15.jpg" alt="WB Wood R" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Wood (R)" data-lang-en="Wood (R)">Wood (R)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (R)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 15.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (R)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 15.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+    </div>
+
+     <div class="product-item wedding-board wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+      data-harga-myr="190"
+     data-addon-myr="40"
+     data-harga-sgd="58"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.wood 16.jpg" alt="WB Wood S" 
+      class="w-full h-48 object-contain rounded-md mb-4" />
+      <p class="text-sm text-gray-500 mb-1" data-lang-en="Wood (S)" data-lang-my="Wood (S)">Wood (S)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engrave + Laser Cut" data-lang-en="3D + Engrave + Laser Cut">3D + Engrave + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 18 Inchi x 24 Inchi" data-lang-en="Size: 18 Inchi x 24 Inchi">Size: 18 Inchi x 24 Inchi</p>
+      
+      <label class="block">
+      <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
+      </label>
+
+      <p class="harga-final text-pink-600 font-bold mt-3">RM190.00</p>
+
+      <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Wood (S)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 16.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+  Simpan ke Troli
+</button>
+
+<button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Wood (S)"
+        data-harga-myr="190"
+        data-harga-sgd="58"
+        data-img="img/produk/wedding-board/wedding-board.wood 16.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
     </div>
@@ -225,7 +938,7 @@
 
   <div class="product-section" data-kategori="wedding-board mirror">
     <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Mirror</h2>
-    <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+    <p class="text-sm text-gray-500 italic mb-2 md:hidden" data-lang-my="➡️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️" data-lang-en="⬅️ swipe left or right to see more products ➡️">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
      <div class=" produk-slider-wrapper">
     <div class="produk-slider">
 
@@ -240,13 +953,14 @@
       <img src="img/produk/wedding-board/Mirror(A).jpg" alt="WB Mirror A" 
       class="w-full h-48 object-contain rounded-md mb-4" />
 
-      <p class="text-sm text-gray-500 mb-1">Mirror (A)</p>
-      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
-      <p class="text-sm text-gray-600">Size: 48 Inchi x 16.8 Inchi</p>
+      <p class="text-sm text-gray-500 mb-1" data-lang-my="Mirror (A)" data-lang-en="Mirror (A)">Mirror (A)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Sticker + Laser Cut" data-lang-en="3D Sticker + Laser Cut">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600" data-lang-my="Size: 48 Inchi x 16.8 Inchi" data-lang-en="Size: 48 Inchi x 16.8 Inchi">Size: 48 Inchi x 16.8 Inchi</p>
 
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>  
+      (+<span class="addon-amount">RM40</span>)
       </label>
 
       <p class="harga-final text-pink-600 font-bold mt-3">RM290.00</p>
@@ -256,7 +970,9 @@
         data-nama="Wedding Board - Mirror (A)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(A).jpg">
+        data-img="img/produk/wedding-board/Mirror(A).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
   Simpan ke Troli
 </button>
 
@@ -264,7 +980,9 @@
         data-nama="Wedding Board - Mirror (A)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(A).jpg">
+        data-img="img/produk/wedding-board/Mirror(A).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
     </div>
@@ -284,7 +1002,8 @@
   
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
       </label>
     
       <p class="harga-final text-pink-600 font-bold mt-3">RM270.00</p>
@@ -293,7 +1012,9 @@
         data-nama="Wedding Board - Mirror (B)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(B).jpg">
+        data-img="img/produk/wedding-board/Mirror(B).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
   Simpan ke Troli
 </button>
 
@@ -301,7 +1022,9 @@
         data-nama="Wedding Board - Mirror (B)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(B).jpg">
+        data-img="img/produk/wedding-board/Mirror(B).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -323,16 +1046,19 @@
        
        <label class="block">
        <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-       Tambah Stand (+<span class="addon-amount">RM40</span>)
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+       (+<span class="addon-amount">RM40</span>)
        </label>
 
        <p class="harga-final text-pink-600 font-bold mt-3">RM290.00</p>
 
        <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
-        data-nama="Wedding Board - Mirror (B)"
+        data-nama="Wedding Board - Mirror (C)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(C).jpg">
+        data-img="img/produk/wedding-board/Mirror(C).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
   Simpan ke Troli
 </button>
 
@@ -340,7 +1066,9 @@
         data-nama="Wedding Board - Mirror (C)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Mirror(C).jpg">
+        data-img="img/produk/wedding-board/Mirror(C).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
        </div>
@@ -360,16 +1088,19 @@
 
        <label class="block">
        <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-       Tambah Stand (+<span class="addon-amount">RM40</span>)
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+       (+<span class="addon-amount">RM40</span>)
        </label>
       
        <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
 
        <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
-        data-nama="Wedding Board - Mirror (B)"
+        data-nama="Wedding Board - Mirror (D)"
         data-harga-myr="170"
         data-harga-sgd="52"
-        data-img="img/produk/wedding-board/Mirror(D).jpg">
+        data-img="img/produk/wedding-board/Mirror(D).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -377,7 +1108,173 @@
         data-nama="Wedding Board - Mirror (D)"
         data-harga-myr="170"
         data-harga-sgd="52"
-        data-img="img/produk/wedding-board/Mirror(D).jpg">
+        data-img="img/produk/wedding-board/Mirror(D).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
+        </button>
+       </div>
+
+       <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+    data-harga-myr="170"
+     data-addon-myr="RM40"
+     data-harga-sgd="52"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.mirror 1.jpg" alt="WB Mirror E" class="w-full h-48 object-contain rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (E)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      
+
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+       (+<span class="addon-amount">RM40</span>)
+       </label>
+      
+       <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (E)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 1.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (E)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 1.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
+        </button>
+       </div>
+
+       <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+    data-harga-myr="170"
+     data-addon-myr="RM40"
+     data-harga-sgd="52"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.mirror 2.jpg" alt="WB Mirror F" class="w-full h-48 object-contain rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (F)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      
+
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+       (+<span class="addon-amount">RM40</span>)
+       </label>
+      
+       <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (F)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 2.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (F)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 2.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
+        </button>
+       </div>
+
+       <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+    data-harga-myr="170"
+     data-addon-myr="RM40"
+     data-harga-sgd="52"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.mirror 3.jpg" alt="WB Mirror G" class="w-full h-48 object-contain rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (G)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      
+
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+       (+<span class="addon-amount">RM40</span>)
+       </label>
+      
+       <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (G)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 3.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (G)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 3.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
+        </button>
+       </div>
+
+       <div class="product-item wedding-board mirror bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+    data-harga-myr="170"
+     data-addon-myr="RM40"
+     data-harga-sgd="52"
+     data-addon-sgd="12">
+
+      <img src="img/produk/wedding-board/wedding-board.mirror 4.jpg" alt="WB Mirror H" class="w-full h-48 object-contain rounded-md mb-4">
+      <p class="text-sm text-gray-500 mb-1">Mirror (H)</p>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">3D Sticker + Laser Cut</h3>
+      <p class="text-sm text-gray-600">Size: 18 Inchi x 24 Inchi</p>
+      
+
+       <label class="block">
+       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
+       <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span>
+       (+<span class="addon-amount">RM40</span>)
+       </label>
+      
+       <p class="harga-final text-pink-600 font-bold mt-3">RM170.00</p>
+
+       <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Wedding Board - Mirror (H)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 4.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+        <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Wedding Board - Mirror (H)"
+        data-harga-myr="170"
+        data-harga-sgd="52"
+        data-img="img/produk/wedding-board/wedding-board.mirror 4.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
         Bayar Sekarang
         </button>
        </div>
@@ -389,7 +1286,7 @@
 
 <div class="product-section" data-kategori="wedding-board acrylic">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Wedding Board - Acrylic</h2>
-  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+ <p class="text-sm text-gray-500 italic mb-2 md:hidden" data-lang-my="➡️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️" data-lang-en="⬅️ swipe left or right to see more products ➡️">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
   <div class=" produk-slider-wrapper">
   <div class="produk-slider">
 
@@ -407,12 +1304,14 @@
 
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
       </label>
 
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="270" data-addon-sgd="82">
-      Tambah Bunga (+<span class="addon-amount">RM100</span>)
+      <span class="addon-label" data-lang-my="Tambah Bunga" data-lang-en="Add On Flowers">Tambah Bunga</span>
+     (+<span class="addon-amount">RM100</span>)
       </label>
     
       <p class="harga-final text-pink-600 font-bold mt-4">RM170.00</p>
@@ -422,7 +1321,9 @@
         data-nama="Wedding Board - Acrylic (A)"
         data-harga-myr="170"
         data-harga-sgd="52"
-        data-img="img/produk/wedding-board/Acrylic(A).jpg">
+        data-img="img/produk/wedding-board/Acrylic(A).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -430,7 +1331,9 @@
         data-nama="Wedding Board - Acrylic (A)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Acrylic(A).jpg">
+        data-img="img/produk/wedding-board/Acrylic(A).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -451,12 +1354,14 @@
 
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-      Tambah Stand (+<span class="addon-amount">RM40</span>)
+      <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+      (+<span class="addon-amount">RM40</span>)
       </label>
 
       <label class="block">
       <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="270" data-addon-sgd="82">
-      Tambah Bunga (+<span class="addon-amount">RM100</span>)
+      <span class="addon-label" data-lang-my="Tambah Bunga" data-lang-en="Add On Flowers">Tambah Bunga</span> 
+      (+<span class="addon-amount">RM100</span>)
       </label>
       
       <p class="harga-final text-pink-600 font-bold mt-4">RM170.00</p>
@@ -467,7 +1372,9 @@
         data-nama="Wedding Board - Acrylic (B)"
         data-harga-myr="170"
         data-harga-sgd="52"
-        data-img="img/produk/wedding-board/Mirror(B).jpg">
+        data-img="img/produk/wedding-board/Mirror(B).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -475,7 +1382,9 @@
         data-nama="Wedding Board - Acrylic (B)"
         data-harga-myr="290"
         data-harga-sgd="88"
-        data-img="img/produk/wedding-board/Acrylic(B).jpg">
+        data-img="img/produk/wedding-board/Acrylic(B).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
     </div>
@@ -484,7 +1393,8 @@
 </div>
 
    <div class="product-section" data-kategori="mas-kahwin acrylic">
-  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2><p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+  <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Acrylic</h2>
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden" data-lang-my="➡️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️" data-lang-en="⬅️ swipe left or right to see more products ➡️">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
   <div class=" produk-slider-wrapper">
   <div class="produk-slider">
 
@@ -494,7 +1404,7 @@
     
     <img src="img/produk/mas-kahwin/MK-Acrylic(A).jpg" alt="MK Acrylic A" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Acrylic (A)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar" data-lang-en="UV Sticker + Dummy Gold">UV Sticker + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM100.00</p>
       
@@ -503,7 +1413,9 @@
         data-nama="Mas Kahwin - Acrylic (A)"
         data-harga-myr="100"
         data-harga-sgd="30"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -511,7 +1423,9 @@
         data-nama="Mas Kahwin - Acrylic (A)"
         data-harga-myr="100"
         data-harga-sgd="30"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(A).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -524,7 +1438,7 @@
 
     <img src="img/produk/mas-kahwin/MK-Acrylic(B).jpg" alt="MK Acrylic B" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Acrylic(B)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar" data-lang-en="UV Sticker + Dummy Gold">UV Sticker + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM95.00</p>
      
@@ -533,7 +1447,9 @@
         data-nama="Mas Kahwin - Acrylic (B)"
         data-harga-myr="95"
         data-harga-sgd="29"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -541,7 +1457,9 @@
         data-nama="Mas Kahwin - Acrylic (B)"
         data-harga-myr="95"
         data-harga-sgd="29"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(B).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -553,7 +1471,7 @@
 
     <img src="img/produk/mas-kahwin/MK-Acrylic(C).jpg" alt="MK Acrylic C" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Acrylic(C)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar + Bunga</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar + Bunga" data-lang-en="UV Sticker + Dummy Gold + Flowers">UV Sticker + Dummy Dinar + Bunga</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
       
@@ -562,7 +1480,9 @@
         data-nama="Mas Kahwin - Acrylic (C)"
         data-harga-myr="280"
         data-harga-sgd="85"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -570,7 +1490,9 @@
         data-nama="Mas Kahwin - Acrylic (C)"
         data-harga-myr="280"
         data-harga-sgd="85"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(C).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -582,7 +1504,7 @@
 
     <img src="img/produk/mas-kahwin/MK-Acrylic(D).jpg" alt="MK Acrylic D" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK (D)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">UV Sticker + Dummy Dinar + Bunga</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar + Bunga" data-lang-en="UV Sticker + Dummy Gold + Flowers">UV Sticker + Dummy Dinar + Bunga</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
 
@@ -592,7 +1514,9 @@
         data-nama="Mas Kahwin - Acrylic (D)"
         data-harga-myr="280"
         data-harga-sgd="85"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -600,17 +1524,84 @@
         data-nama="Mas Kahwin - Acrylic (D)"
         data-harga-myr="280"
         data-harga-sgd="85"
-        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg">
+        data-img="img/produk/mas-kahwin/MK-Acrylic(D).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
+  </div>
 
+  <div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="280"
+     data-harga-sgd="85">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-arcylic 2.jpg" alt="MK Acrylic E" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (E)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar" data-lang-en="UV Sticker + Dummy Gold">UV Sticker + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
+
+     
+
+   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (E)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-arcylic 2.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (E)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-arcylic 2.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+<div class="product-item mas-kahwin acrylic bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="280"
+     data-harga-sgd="85">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-arcylic.jpg" alt="MK Acrylic F" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK (F)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="UV Sticker + Dummy Dinar" data-lang-en="UV Sticker + Dummy Gold">UV Sticker + Dummy Dinar + Bunga</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM280.00</p>
+
+     
+
+   <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Acrylic (F)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-arcylic.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+  <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Acrylic (F)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-arcylic.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
   </div>
   </div>
   </div>
 
   <div class="product-section" data-kategori="mas-kahwin wood">
   <h2 class="text-2xl font-bold text-pink-600 mb-6">Mas Kahwin - Wood</h2>
-  <p class="text-sm text-gray-500 italic mb-2 md:hidden">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
+  <p class="text-sm text-gray-500 italic mb-2 md:hidden" data-lang-my="➡️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️" data-lang-en="⬅️ swipe left or right to see more products ➡️">⬅️ Leret ke kiri atau kanan untuk lihat lebih banyak produk ➡️</p>
    <div class=" produk-slider-wrapper">
   <div class="produk-slider">
   <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
@@ -619,7 +1610,7 @@
 
     <img src="img/produk/mas-kahwin/MK-wood(A).jpg" alt="MK Wood A" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Wood (A)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
 
@@ -627,7 +1618,9 @@
         data-nama="Mas Kahwin - Wood (A)"
         data-harga-myr="89"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-wood(A).jpg">
+        data-img="img/produk/mas-kahwin/MK-wood(A).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -635,7 +1628,9 @@
         data-nama="Mas Kahwin - Wood (A)"
         data-harga-myr="280"
         data-harga-sgd="85"
-        data-img="img/produk/mas-kahwin/MK-wood(A).jpg">
+        data-img="img/produk/mas-kahwin/MK-wood(A).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -647,7 +1642,7 @@
 
     <img src="img/produk/mas-kahwin/MK-wood(B).jpg" alt="MK Wood B" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Wood (B)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM80.00</p>
 
@@ -655,7 +1650,9 @@
         data-nama="Mas Kahwin - Wood (B)"
         data-harga-myr="80"
         data-harga-sgd="24"
-        data-img="img/produk/mas-kahwin/MK-wood(B).jpg">
+        data-img="img/produk/mas-kahwin/MK-wood(B).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -663,7 +1660,9 @@
         data-nama="Mas Kahwin - Wood (B)"
         data-harga-myr="80"
         data-harga-sgd="24"
-        data-img="img/produk/mas-kahwin/MK-wood(B).jpg">
+        data-img="img/produk/mas-kahwin/MK-wood(B).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -675,7 +1674,7 @@
 
     <img src="img/produk/mas-kahwin/MK-Wood(C).jpg" alt="MK Wood C" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Wood (C)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
 
@@ -683,7 +1682,9 @@
         data-nama="Mas Kahwin - Wood (C)"
         data-harga-myr="89"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -691,7 +1692,9 @@
         data-nama="Mas Kahwin - Wood (C)"
         data-harga-myr="89"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(C).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -703,7 +1706,7 @@
 
     <img src="img/produk/mas-kahwin/MK-Wood(D).jpg" alt="MK Wood D" class="w-full h-48 object-contain rounded-md mb-4">
     <p class="text-sm text-gray-500 mb-1">MK Wood (D)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
 
@@ -711,7 +1714,9 @@
         data-nama="Mas Kahwin - Wood (D)"
         data-harga-myr="89"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -719,7 +1724,9 @@
         data-nama="Mas Kahwin - Wood (D)"
         data-harga-myr="89"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(D).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -730,8 +1737,8 @@
      data-harga-sgd="27">
      
     <img src="img/produk/mas-kahwin/MK-Wood(E).jpg" alt="MK Wood E" class="w-full h-48 object-contain rounded-md mb-4">
-    <p class="text-sm text-gray-500 mb-1">MK Wood(D)</p>
-    <h3 class="text-lg font-bold text-gray-800 mb-2">3D + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-500 mb-1">MK Wood(E)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D + Engraving + Dummy Dinar" data-lang-en="3D + Engraving + Dummy Gold">3D + Engraving + Dummy Dinar</h3>
     <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
     <p class="harga-final text-pink-600 font-bold mt-3">RM90.00</p>
 
@@ -739,7 +1746,9 @@
         data-nama="Mas Kahwin - Wood (E)"
         data-harga-myr="90"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -747,7 +1756,9 @@
         data-nama="Mas Kahwin - Wood (E)"
         data-harga-myr="90"
         data-harga-sgd="27"
-        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(E).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -760,7 +1771,7 @@
 
   <img src="img/produk/mas-kahwin/MK-Wood(F).jpg" alt="MK Wood F" class="w-full h-48 object-contain rounded-md mb-4">
   <p class="text-sm text-gray-500 mb-1">MK Wood (F)</p>
-  <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+  <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
   <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
   <p class="harga-final text-pink-600 font-bold mt-3">RM250.00</p>
 
@@ -768,7 +1779,9 @@
         data-nama="Mas Kahwin - Wood (F)"
         data-harga-myr="250"
         data-harga-sgd="76"
-        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -776,7 +1789,9 @@
         data-nama="Mas Kahwin - Wood (F)"
         data-harga-myr="250"
         data-harga-sgd="76"
-        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(F).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
@@ -789,7 +1804,7 @@
 
   <img src="img/produk/mas-kahwin/MK-Wood(G).jpg" alt="MK Wood G" class="w-full h-48 object-contain rounded-md mb-4">
   <p class="text-sm text-gray-500 mb-1">MK Wood (G)</p>
-  <h3 class="text-lg font-bold text-gray-800 mb-2">3D Wood + Engraving + Dummy Dinar</h3>
+  <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
   <p class="text-sm text-gray-600">Size: 25cm x 25cm</p>
   <p class="harga-final text-pink-600 font-bold mt-3">RM69.00</p>
 
@@ -797,7 +1812,9 @@
         data-nama="Mas Kahwin - Wood (G)"
         data-harga-myr="69"
         data-harga-sgd="21"
-        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
         Simpan ke Troli
         </button> 
 
@@ -805,11 +1822,480 @@
         data-nama="Mas Kahwin - Wood (G)"
         data-harga-myr="69"
         data-harga-sgd="21"
-        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg">
+        data-img="img/produk/mas-kahwin/MK-Wood(G).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+</div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 1.jpg" alt="MK Wood H" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (H)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (H)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 1.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (H)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 1.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
   Bayar Sekarang
 </button>
 
-</div>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 2.jpg" alt="MK Wood I" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (I)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (I)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 2.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (I)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 2.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 3.jpg" alt="MK Wood J" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (J)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (J)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 3.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (J)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 3.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 5.jpg" alt="MK Wood K" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (K)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (K)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 5.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (K)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 5.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 6.jpg" alt="MK Wood L" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (L)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (L)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 6.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (L)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 6.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 7.jpg" alt="MK Wood M" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (M)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (M)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 7.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (M)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 7.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 8.jpg" alt="MK Wood N" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (N)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (N)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 8.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (N)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 8.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 10.jpg" alt="MK Wood O" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (O)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (O)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 10.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (O)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 10.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 11.jpg" alt="MK Wood P" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (P)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (P)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 11.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (P)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 11.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 12.jpg" alt="MK Wood Q" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (Q)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (Q)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 12.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (Q)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 12.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 13.jpg" alt="MK Wood R" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (R)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (R)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 13.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (R)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 13.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 14.jpg" alt="MK Wood S" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (S)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (S)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 14.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (S)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 14.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 15.jpg" alt="MK Wood T" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (T)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (T)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 15.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (T)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 15.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+  <div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 16.jpg" alt="MK Wood U" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (U)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (U)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 16.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (U)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="iimg/produk/mas-kahwin/mas kahwin-wood 16.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+  </div>
+
+<div class="product-item mas-kahwin wood bg-white rounded-xl shadow-lg overflow-hidden p-4 text-center snap-start min-w-[270px]"
+     data-harga-myr="89"
+     data-harga-sgd="27">
+
+    <img src="img/produk/mas-kahwin/mas kahwin-wood 17.jpg" alt="MK Wood V" class="w-full h-48 object-contain rounded-md mb-4">
+    <p class="text-sm text-gray-500 mb-1">MK Wood (V)</p>
+    <h3 class="text-lg font-bold text-gray-800 mb-2" data-lang-my="3D Wood + Engraving + Dummy Dinar" data-lang-en="3D Wood + Engraving + Dummy Gold">3D Wood + Engraving + Dummy Dinar</h3>
+    <p class="text-sm text-gray-600">Size: 10.5cm x 14.8cm</p>
+    <p class="harga-final text-pink-600 font-bold mt-3">RM89.00</p>
+
+    <button class="btn-simpan px-3 py-2 border border-pink-500 text-pink-500 rounded-full mt-2"
+        data-nama="Mas Kahwin - Wood (V)"
+        data-harga-myr="89"
+        data-harga-sgd="27"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 17.jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
+        </button> 
+
+      <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
+        data-nama="Mas Kahwin - Wood (V)"
+        data-harga-myr="280"
+        data-harga-sgd="85"
+        data-img="img/produk/mas-kahwin/mas kahwin-wood 17.jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+  Bayar Sekarang
+</button>
+
+  </div>
 </div>
 </div>
   </div>
@@ -831,11 +2317,12 @@
        <p class="text-sm text-gray-500 mb-1">Guest Puzzlebook</p>
        <h3 class="text-lg font-bold text-gray-800 mb-2">MDF Engraved Puzzle</h3>
        <p class="text-sm text-gray-600">Size: 24 Inchi x 18 Inchi</p>
-       <p class="text-sm text-gray-600">96 Pieces Puzzle + Marker Stand</p>
+       <p class="text-sm text-gray-600" >96 Pieces Puzzle</p>
 
         <label class="block">
         <input type="checkbox" class="addon-checkbox mr-1" data-addon-myr="40" data-addon-sgd="12">
-        Tambah Stand (+<span class="addon-amount">RM40</span>)
+        <span class="addon-label" data-lang-my="Tambah Stand" data-lang-en="Add On Stand">Tambah Stand</span> 
+        (+<span class="addon-amount">RM40</span>)
        </label>
 
        <p class="harga-final text-pink-600 font-bold mt-3">RM300.00</p>
@@ -844,16 +2331,20 @@
         data-nama="Guest PuzzleBooks(A)"
         data-harga-myr="300"
         data-harga-sgd="91"
-        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg">
-  Simpan ke Troli
+        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg"
+        data-lang-my="Simpan ke Troli"
+        data-lang-en="Add To Cart">
+        Simpan ke Troli
 </button>
 
         <button class="btn-bayar px-4 py-2 bg-pink-600 text-white rounded"
         data-nama="Guest PuzzleBooks - (A)"
         data-harga-myr="300"
         data-harga-sgd="91"
-        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg">
-  Bayar Sekarang
+        data-img="img/produk/guest-puzzle/Guest-Puzzle(1).jpg"
+        data-lang-my="Bayar Sekarang"
+        data-lang-en="Pay Now">
+        Bayar Sekarang
 </button>
 
     </div>
@@ -1182,10 +2673,23 @@ document.querySelectorAll('.produk-slider .product-item').forEach(item => {
   observer.observe(item);
 });
 
-
 </script>
 
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
 
+    document.querySelectorAll('[data-lang-my]').forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('language') || 'my';
+    setLanguage(lang);
+  });
+</script>
 
 </body>
 </html>
