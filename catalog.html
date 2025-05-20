@@ -69,10 +69,10 @@
   </a>
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="produk.html" class="hover:underline">Produk</a>
-    <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="index.html" class="hover:underline" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+    <a href="produk.html" class="hover:underline" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+    <a href="catalog.html" class="hover:underline" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+    <a href="hubungi.html" class="hover:underline" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
     <a href="cart.html" class="relative">
     🛒
     <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
@@ -82,24 +82,49 @@
 </div>
 
   <nav id="mobileMenu" class="md:hidden">
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
+<a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
+  <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+  <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+  <a href="catalog.html" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+  <a href="hubungi.html" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
 </nav>
+
+
+<div class="language-toggle flex gap-2 text-sm items-center">
+  <button onclick="setLanguage('my')" class="py-1 px-2 border rounded text-pink-500">MY</button>
+  <span>|</span>
+  <button onclick="setLanguage('en')" class="py-1 px-2 border rounded text-pink-500">EN</button>
+</div>
+
 
 </header>
 
 <section class="relative py-20 px-6 text-center bg-cover bg-center bg-overlay overflow-hidden" style="background-image: url('img/5186109.jpg'); background-size: 1200px;">
   <div class="absolute inset-10 bg-white/50 backdrop-blur-sm"></div>
   <div class="relative z-10 max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-pink-500 fade-in">💍 Katalog Perkahwinan Eksklusif</h2>
-    <p class="text-gray-700 max-w-xl mx-auto mb-10 fade-in-delayed">Terokai setiap ruang yang diilhamkan oleh rekaan perkahwinan kami.</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-pink-500 fade-in" data-lang-my="💍 Katalog Perkahwinan Eksklusif" data-lang-en="💍 Exclusive Wedding Catalog">💍 Katalog Perkahwinan Eksklusif</h2>
+    <p class="text-gray-700 max-w-xl mx-auto mb-10 fade-in-delayed" data-lang-my="Terokai setiap ruang yang diilhamkan oleh rekaan perkahwinan kami." data-lang-en="Explore every space inspired by our wedding designs.">Terokai setiap ruang yang diilhamkan oleh rekaan perkahwinan kami.</p>
     <img src="img/mochup-katalog.png" alt="Setup Katalog" class="w-full rounded-xl shadow-lg mb-8 fade-in-delayed float-smooth">
-    <a href="SeniWedding-Catalog.pdf" download class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full shadow-lg transition fade-in-delayed">📥 Muat Turun Katalog Penuh</a>
+    <a href="SeniWedding-Catalog.pdf" download class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full shadow-lg transition fade-in-delayed" data-lang-my="📥 Muat Turun Katalog Penuh" data-lang-en="📥 Download Full Catalog">📥 Muat Turun Katalog Penuh</a>
   </div>
 </section>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+
+    document.querySelectorAll('[data-lang-my]').forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('language') || 'my';
+    setLanguage(lang);
+  });
+</script>
+
 
 </body>
 </html>
