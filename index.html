@@ -39,10 +39,10 @@
   </a>
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="produk.html" class="hover:underline">Produk</a>
-    <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="index.html" class="hover:underline" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+    <a href="produk.html" class="hover:underline" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+    <a href="catalog.html" class="hover:underline" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+    <a href="hubungi.html" class="hover:underline" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
     <a href="cart.html" class="relative">
     🛒
     <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
@@ -52,12 +52,20 @@
 </div>
 
 <nav id="mobileMenu" class="md:hidden">
-  <a href="cart.html" id="troliIcon">Troli 🛒</a>
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
+  <a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
+  <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+  <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+  <a href="catalog.html" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+  <a href="hubungi.html" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
 </nav>
+
+
+<div class="language-toggle flex gap-2 text-sm items-center">
+  <button onclick="setLanguage('my')" class="py-1 px-2 border rounded text-pink-500">MY</button>
+  <span>|</span>
+  <button onclick="setLanguage('en')" class="py-1 px-2 border rounded text-pink-500">EN</button>
+</div>
+
 
 </header>
 <!-- Mobile Nav Menu -->
@@ -66,11 +74,11 @@
   <!-- Hero Section -->
   <section id="home" class="relative bg-cover bg-center h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden" style="background-image: url('img/bg-blur.png');">
     <div class="hero-animate hover:scale-105 hover:shadow-xl ">
-      <h2 class="text-6xl md:text-6xl font-bold mb-4 text-[#d48c94] fancy-font" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="200">Seni untuk Cinta Anda</h2>
-      <p class="text-lg md:text-xl mb-6" data-aos="fade-up">✨ Sentuhan eksklusif untuk hari bermakna anda ✨</p>
+      <h2 class="text-9xl md:text-9xl font-bold mb-4 text-[#fff] fancy-font" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="200" data-lang-my="Seni Untuk Cinta Anda" data-lang-en="Art for Your Love">Seni untuk Cinta Anda</h2>
+      <p class="text-lg md:text-xl mb-6 text-[c12369]" data-aos="fade-up" data-lang-my="✨ Sentuhan eksklusif untuk hari bermakna anda ✨" data-lang-en="✨ Exclusive touches for your meaningful day ✨">✨ Sentuhan eksklusif untuk hari bermakna anda ✨</p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="produk.html" class="bg-pink-400 hover:bg-[#eebec3] hover:scale-105 text-white px-6 py-3 rounded-full shadow transition">💌 Beli Sekarang</a>
-        <a href="SeniWedding-Catalog.pdf" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition">📖 MuatTurun Katalog</a>
+        <a href="produk.html" class="bg-pink-400 hover:bg-[#eebec3] hover:scale-105 text-white px-6 py-3 rounded-full shadow transition" data-lang-my="Beli Sekarang" data-lang-en="Buy Now">Beli Sekarang</a>
+        <a href="SeniWedding-Catalog.pdf" class="border-2 border-pink-400 text-pink-500 hover:bg-pink-50 px-6 py-3 rounded-full shadow transition" data-lang-my="📖 MuatTurun Katalog" data-lang-en="📖 Download Catalog">📖 MuatTurun Katalog</a>
         <a href="#why" class="scroll-down">▼</a>
       </div>
     </div>
@@ -78,18 +86,18 @@
 
 
   <section id="why" class="bg-pink-50 py-16 px-6 text-center">
-  <h2 class="text-2xl font-bold mb-6" data-aos="fade-up">Kenapa Pilih Seni Wedding HT?</h2>
+  <h2 class="text-2xl font-bold mb-6" data-aos="fade-up" data-lang-my="Kenapa Pilih Seni Wedding HT?" data-lang-en="Why Choose Seni Wedding HT?">Kenapa Pilih Seni Wedding HT?</h2>
   <div class="grid md:grid-cols-3 gap-8">
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="0">🎨 Design Eksklusif</h3><p class="text-sm text-gray-600">Setiap produk direka khas mengikut tema anda.</p></div>
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-delay="100">📦 Siap Cepat</h3><p class="text-sm text-gray-600">Tempoh siap dalam masa 3-5 hari bekerja.</p></div>
-    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-left"data-aos-easing="ease-in-out"  data-aos-delay="200">💯 Jaminan Puas Hati</h3><p class="text-sm text-gray-600">Kami utamakan kepuasan pelanggan sepenuhnya.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="0" data-lang-my="🎨 Design Eksklusif" data-lang-en="🎨Exclusive Design">🎨 Design Eksklusif</h3><p class="text-sm text-gray-600" data-lang-my="Setiap produk direka khas mengikut tema anda" data-lang-en="Each product is custom-designed according to your theme">Setiap produk direka khas mengikut tema anda.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-delay="100" data-lang-my="📦 Pembuatan Teliti" data-lang-en="📦 Each Piece is crafted with care and attention to detail">📦 Pembuatan Teliti</h3><p class="text-sm text-gray-600" data-lang-my="Tempoh siap dalam masa 8 minggu" data-lang-en="Ready in 8 Weeks">Tempoh siap dalam masa 8 minggu.</p></div>
+    <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-left"data-aos-easing="ease-in-out"  data-aos-delay="200" data-lang-my="💯 Jaminan Puas Hati" data-lang-en="💯 Satisfaction Guarantee">💯 Jaminan Puas Hati</h3><p class="text-sm text-gray-600" data-lang-my="Kami utamakan kepuasan pelanggan sepenuhnya." data-lang-en="We prioritize complete customer satisfaction.">Kami utamakan kepuasan pelanggan sepenuhnya.</p></div>
   </div>
 </section>
 
 
 
   <section id="testimoni" class="overflow-hidden py-10 bg-gradient-to-b from-[#fdfaf6] to-[#fff5f8]">
-  <h2 class="text-3xl font-bold text-center mb-6">✨ Testimoni Pelanggan Kami</h2>
+  <h2 class="text-3xl font-bold text-center mb-6" data-lang-my="✨ Testimoni Pelanggan Kami" data-lang-en="✨ Customer Testimonials">✨ Testimoni Pelanggan Kami</h2>
 
     <div class="carousel-wrapper overflow-hidden w-full">
         <div class="carousel-track flex gap-4 w-max transition-transform duration-700 ease-in-out" id="carouselTrack">
@@ -125,16 +133,16 @@
 
   <!-- Produk Pilihan Section (Polished) -->
   <section id="produk" class="py-16 px-4 md:px-14  bg-gray-50 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">🌟 Produk Pilihan</h2>
-    <p class="mb-12 text-gray-600 max-w-xl mx-auto">Temui rekaan eksklusif yang memikat hati untuk momen terindah anda.</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-my="🌟 Produk Pilihan" data-lang-en="🌟 Featured Products">🌟 Produk Pilihan</h2>
+    <p class="mb-12 text-gray-600 max-w-xl mx-auto" data-lang-my="Temui rekaan eksklusif yang memikat hati untuk momen terindah anda." data-lang-en="Discover exclusive designs to capture your beautiful moments.">Temui rekaan eksklusif yang memikat hati untuk momen terindah anda.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10" data-aos="fade-up" data-aos-duration="1000">
       <!-- Produk 1 -->
       <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 " data-aos="fade-up-right" data-aos-delay="200">
         <img src="img/produk/mas-kahwin/MK-Acrylic(A).jpg" alt="Frame Kaligrafi" class="rounded-t-2xl w-full h-64 object-cover">
         <div class="p-5">
-          <h3 class="text-lg font-semibold mb-1 text-gray-800">Frame Kaligrafi</h3>
-          <p class="text-sm text-gray-500">Keindahan ayat dalam bingkai penuh elegan — khas untuk penyatuan dua jiwa.</p>
+          <h3 class="text-lg font-semibold mb-1 text-gray-800" data-lang-my="Mas Kahwin" data-lang-en="Marriage Gift">Mas Kahwin</h3>
+          <p class="text-sm text-gray-500" data-lang-my="Keindahan ayat dalam bingkai penuh elegan — khas untuk penyatuan dua jiwa." data-lang-en="The beauty of verses in an elegant frame — made for the union of two souls.">Keindahan ayat dalam bingkai penuh elegan — khas untuk penyatuan dua jiwa.</p>
         </div>
       </div>
 
@@ -142,8 +150,8 @@
       <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
         <img src="img/produk/wedding-board/Acrylic(A).jpg" alt="Puzzle Tetamu" class="rounded-t-2xl w-full h-64 object-cover">
         <div class="p-5">
-          <h3 class="text-lg font-semibold mb-1 text-gray-800">Wedding Board</h3>
-          <p class="text-sm text-gray-500">Persembahan mas kahwin dalam gaya yang mempesona dan bermakna.</p>
+          <h3 class="text-lg font-semibold mb-1 text-gray-800" data-lang-my="Papan Perkahwinan" data-lang-en="Wedding Board">Papan Perkahwinan</h3>
+          <p class="text-sm text-gray-500" data-lang-my="Persembahan mas kahwin dalam gaya yang mempesona dan bermakna." data-lang-en="A presentation of dowry in a meaningful and mesmerizing style.">Persembahan mas kahwin dalam gaya yang mempesona dan bermakna.</p>
         </div>
       </div>
 
@@ -151,8 +159,8 @@
       <div class="produk-card bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 " data-aos="fade-up-left" data-aos-delay="200">
         <img src="img/produk/guest-puzzle/Guest-Puzzle(2).jpg" alt="GuestBook Puzzle" class="rounded-t-2xl w-full h-64 object-cover">
         <div class="p-5">
-          <h3 class="text-lg font-semibold mb-1 text-gray-800">GuestBook Puzzle</h3>
-          <p class="text-sm text-gray-500">Kenangan setiap tetamu, satu keping puzzle cinta yang abadi.</p>
+          <h3 class="text-lg font-semibold mb-1 text-gray-800" data-lang-my="GuestBook Puzzle" data-lang-en="GuestBook Puzzle">GuestBook Puzzle</h3>
+          <p class="text-sm text-gray-500" data-lang-my="Kenangan setiap tetamu, satu keping puzzle cinta yang abadi." data-lang-en="A memory of every guest, a piece of everlasting love puzzle.">Kenangan setiap tetamu, satu keping puzzle cinta yang abadi.</p>
         </div>
       </div>
     </div>
@@ -185,6 +193,24 @@
 
   requestAnimationFrame(autoScroll);
 </script>
+
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+
+    document.querySelectorAll('[data-lang-my]').forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('language') || 'my';
+    setLanguage(lang);
+  });
+</script>
+
 
 
 </body>
