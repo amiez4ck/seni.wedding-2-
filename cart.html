@@ -18,10 +18,10 @@
   </a>
 
   <nav class="hidden md:flex items-center gap-6 text-sm relative">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="produk.html" class="hover:underline">Produk</a>
-    <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+   <a href="index.html" class="hover:underline" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+    <a href="produk.html" class="hover:underline" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+    <a href="catalog.html" class="hover:underline" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+    <a href="hubungi.html" class="hover:underline" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
     <a href="cart.html" class="relative">
     🛒
     <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
@@ -31,56 +31,63 @@
 </div>
 
   <nav id="mobileMenu" class="md:hidden">
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
+  <a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
+  <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+  <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+  <a href="catalog.html" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+  <a href="hubungi.html" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
 </nav>
+
+<div class="language-toggle flex gap-2 text-sm items-center">
+  <button onclick="setLanguage('my')" class="py-1 px-2 border rounded text-pink-500">MY</button>
+  <span>|</span>
+  <button onclick="setLanguage('en')" class="py-1 px-2 border rounded text-pink-500">EN</button>
+</div>
+
 
 </header>
 
   <section class="max-w-4xl mx-auto px-6 py-12">
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold text-pink-600">🛒 Troli Pembelian Anda</h1>
-      <a href="produk.html" class="text-sm text-pink-500 hover:underline">← Kembali ke Produk</a>
+      <h1 class="text-3xl font-bold text-pink-600" data-lang-my="🛒 Troli Pembelian Anda" data-lang-en="🛒 Your Shopping Cart"">🛒 Troli Pembelian Anda</h1>
+      <a href="produk.html" class="text-sm text-pink-500 hover:underline" data-lang-my="← Kembali ke Produk" data-lang-en="← Back to Products">← Kembali ke Produk</a>
     </div>
 
     <ul id="senaraiTroli" class="space-y-4 mb-6"></ul>
 
     <div class="flex justify-between items-center border-t pt-4 mt-8">
-      <p class="text-lg font-semibold text-sm text-gray-500 mb-1"">Jumlah Keseluruhan: <span id="totalHarga" class="text-pink-600 font-bold">RM0.00</span></p>
+      <p class="text-lg font-semibold text-sm text-gray-500 mb-1" data-lang-my="Jumlah Keseluruhan:" data-lang-en="Total :" >Jumlah Keseluruhan: <span id="totalHarga" class="text-pink-600 font-bold">RM0.00</span></p>
     </div>
 
     <div class="bg-white rounded-xl shadow p-6 mt-8">
-      <h2 class="text-xl font-semibold text-pink-600 mb-4">Maklumat Pelanggan</h2>
+      <h2 class="text-xl font-semibold text-pink-600 mb-4" data-lang-my="Maklumat Pelanggan" data-lang-en="Customer Information">Maklumat Pelanggan</h2>
 
       <form id="checkoutForm" class="space-y-4">
-        <input type="text" id="nama" placeholder="Nama Penuh" class="w-full border px-3 py-2 rounded" required>
-        <input type="email" id="email" placeholder="Alamat Email" class="w-full border px-3 py-2 rounded" required>
+        <input type="text" id="nama" placeholder="Nama Penuh / Full Name" class="w-full border px-3 py-2 rounded" required>
+        <input type="email" id="email" placeholder="Alamat Email / Email Address" class="w-full border px-3 py-2 rounded" required>
 
         <select id="lokasi" class="w-full border px-3 py-2 rounded" required>
-          <option value="">Pilih Negara</option>
+          <option value="" data-lang-my="Pilih Negara" data-lang-en="Select Country">Pilih Negara</option>
           <option value="Malaysia">Malaysia</option>
           <option value="Singapore">Singapore</option>
         </select>
 
-        <label class="block font-medium mt-4">Warna Dasar (Pilih salah satu):</label>
+        <label class="block font-medium mt-4" data-lang-my="Warna Dasar (Pilih salah satu):" data-lang-en="Base Color (Choose one):">Warna Dasar (Pilih salah satu):</label>
         <select id="warnaDasar" class="w-full border px-3 py-2 rounded">
-          <option value="Putih">Putih</option>
-          <option value="Hitam">Hitam</option>
-          <option value="Gold">Gold</option>
+          <option value="Putih">Putih / White</option>
+          <option value="Hitam">Hitam / Black</option>
+          <option value="Gold">Gold / Emas</option>
           <option value="Rose Gold">Rose Gold</option>
-          <option value="Coklat Kayu">Coklat Kayu</option>
+          <option value="Coklat Kayu">Coklat Kayu / Brown Wood</option>
         </select>
 
-        <label class="block font-medium mt-4">Warna Pilihan Lain (Jika ada):</label>
+        <label class="block font-medium mt-4" data-lang-my="Warna Pilihan Lain (Jika ada):" data-lang-en="Other Color (Optional):">Warna Pilihan Lain (Jika ada):</label>
         <input type="text" id="warnaCustom" placeholder="Contoh: Dusty pink + beige" class="w-full border px-3 py-2 rounded">
 
-        <label class="block font-medium mt-4">Tarikh Diperlukan:</label>
+        <label class="block font-medium mt-4" data-lang-my="Tarikh Diperlukan:" data-lang-en="Date Required:">Tarikh Diperlukan:</label>
         <input type="date" id="tarikhPerlu" class="w-full border px-3 py-2 rounded" required>
 
-        <label class="block font-medium mt-4">Catatan Tambahan (Opsyenal):</label>
+        <label class="block font-medium mt-4" data-lang-my="Catatan Tambahan (Opsyenal):" data-lang-en="Additional Notes (Optional):">Catatan Tambahan (Opsyenal):</label>
         <textarea id="catatan" rows="3" class="w-full border px-3 py-2 rounded" placeholder="Contoh: Perlu segera, atau pos sebelum tarikh tertentu."></textarea>
 
         <div class="flex justify-end gap-4">
@@ -238,5 +245,22 @@ paparkanTroli();
 
 
   </script>
+
+  <script>
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+
+    document.querySelectorAll('[data-lang-my]').forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('language') || 'my';
+    setLanguage(lang);
+  });
+</script>
+
 </body>
 </html>
