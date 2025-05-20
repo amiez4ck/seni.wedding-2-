@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hubungi Kami | Seni Wedding HT</title>
   <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="mobile-hubungi.css" media="only screen and (max-width: 768px)">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -85,52 +86,59 @@
 
   <!-- Desktop Navigation -->
   <nav class="hidden md:flex items-center gap-6 text-sm">
-    <a href="index.html" class="hover:underline">Home</a>
-    <a href="produk.html" class="hover:underline">Produk</a>
-    <a href="catalog.html" class="hover:underline">Katalog</a>
-    <a href="hubungi.html" class="hover:underline">Hubungi</a>
+    <a href="index.html" class="hover:underline" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+    <a href="produk.html" class="hover:underline" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+    <a href="catalog.html" class="hover:underline" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+    <a href="hubungi.html" class="hover:underline" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
     <a href="cart.html" class="relative">
       🛒
       <span id="troliCount" class="absolute -top-2 -right-2 bg-pink-500 text-white rounded-full px-2 text-xs">0</span>
     </a>
   </nav>
+
+  <div class="language-toggle flex gap-2 text-sm items-center">
+  <button onclick="setLanguage('my')" class="py-1 px-2 border rounded text-pink-500">MY</button>
+  <span>|</span>
+  <button onclick="setLanguage('en')" class="py-1 px-2 border rounded text-pink-500">EN</button>
+</div>
+
 </header>
 
 <!-- Mobile Navigation -->
 <nav id="mobileMenu" class="md:hidden hidden flex-col px-4 py-2 space-y-2 bg-white shadow">
-  <a href="index.html">Home</a>
-  <a href="produk.html">Produk</a>
-  <a href="catalog.html">Katalog</a>
-  <a href="hubungi.html">Hubungi</a>
-  <a href="cart.html">Troli 🛒</a>
+  <a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
+  <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
+  <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
+  <a href="catalog.html" data-lang-my="Katalog" data-lang-en="Catalog">Katalog</a>
+  <a href="hubungi.html" data-lang-my="Hubungi" data-lang-en="Contact">Hubungi</a>
 </nav>
 
 
 
 <section class="hero-hubungi" style="background-image: url('images/bg-hubungi.jpg');">
   <div class="hero-text" data-aos="fade-up">
-    <h1>Ada Sebarang Pertanyaan?</h1>
-    <p>Kami sedia membantu anda untuk menjadikan hari bahagia lebih sempurna.</p>
-    <a href="#formHubungi" class="btn-hubungi"><i class="fas fa-envelope"></i> Hubungi Kami</a>
+    <h1 data-lang-my="Ada Sebarang Pertanyaan?" data-lang-en="Have Any Questions?"> Ada Sebarang Pertanyaan?</h1>
+    <p data-lang-my="Kami sedia membantu anda untuk menjadikan hari bahagia lebih sempurna." data-lang-en="We are here to help make your special day perfect.">Kami sedia membantu anda untuk menjadikan hari bahagia lebih sempurna.</p>
+    <a href="#formHubungi" class="btn-hubungi" data-lang-my="Hubungi Kami" data-lang-en="Contact Us"><i class="fas fa-envelope"></i> Hubungi Kami</a>
   </div>
 </section>
 
 <section id="formHubungi" class="form-section px-4 py-10">
   <div class="max-w-xl mx-auto" data-aos="fade-up">
-    <h2 class="text-2xl font-bold mb-6">Borang Hubungi Kami</h2>
+    <h2 class="text-2xl font-bold mb-6"  data-lang-my="Borang Hubungi Kami" data-lang-en="Contact Us Form">Borang Hubungi Kami</h2>
     <form action="mailto:seniwedding@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="nama" placeholder="Nama Penuh" required>
-      <input type="email" name="email" placeholder="Alamat Emel" required>
-      <input type="tel" name="telefon" placeholder="No. Telefon" required>
-      <textarea name="mesej" placeholder="Mesej Anda..." rows="5" required></textarea>
-      <button type="submit" class="btn-submit">🕊️ Hantar</button>
-      <p class="form-info mt-2 text-sm text-gray-600">* Semua maklumat anda adalah rahsia dan selamat.</p>
+      <input type="text" name="nama" placeholder="Nama Penuh" data-lang-my="Nama Penuh" data-lang-en="Full Name" required>
+      <input type="email" name="email" placeholder="Alamat Emel" data-lang-my="Alamat Emel" data-lang-en="Email Address"  required>
+      <input type="tel" name="telefon" placeholder="No. Telefon"  data-lang-my="No. Telefon" data-lang-en="Phone Number" required>
+      <textarea name="mesej" placeholder="Mesej Anda..." rows="5" data-lang-my="Mesej Anda..." data-lang-en="Your Message..." required></textarea>
+      <button type="submit" class="btn-submit" data-lang-my="🕊️ Hantar" data-lang-en="🕊️ Send">🕊️ Hantar</button>
+      <p class="form-info mt-2 text-sm text-gray-600" data-lang-my="* Semua maklumat anda adalah rahsia dan selamat." data-lang-en="* All your information is confidential and secure.">* Semua maklumat anda adalah rahsia dan selamat.</p>
     </form>
   </div>
 </section>
 
 <section class="social-links text-center py-10" data-aos="fade-up">
-  <h3 class="text-lg font-semibold mb-4">Atau Hubungi Kami Melalui</h3>
+  <h3 class="text-lg font-semibold mb-4" data-lang-my="Atau Hubungi Kami Melalui" data-lang-en="Or Contact Us Through">Atau Hubungi Kami Melalui</h3>
   <div class="icons flex justify-center gap-4">
     <a href="https://wa.me/60134419744" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.instagram.com/seni.wedding?igsh=ODY5NDlzcmcxN2hh" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -140,16 +148,17 @@
 </section>
 
 <section class="map-section px-4 pb-12" data-aos="fade-up">
-  <h3 class="text-lg font-semibold text-center mb-4">Lokasi Kami</h3>
+  <h3 class="text-lg font-semibold text-center mb-4" data-lang-my="Lokasi Kami" data-lang-en="Our Location">Lokasi Kami</h3>
   <div class="map-container max-w-4xl mx-auto">
     <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
 
 <footer class="footer bg-[#fdfaf6]">
-  <p>&copy; 2025 Seni Wedding HT. Semua Hak Terpelihara.</p>
+  <p data-lang-my="&copy; 2025 Seni Wedding HT. Semua Hak Terpelihara." data-lang-en="&copy; 2025 Seni Wedding HT. All Rights Reserved.">&copy; 2025 Seni Wedding HT. Semua Hak Terpelihara.</p>
   <div class="footer-links">
-    <a href="#">Terma</a> | <a href="#">Privasi</a>
+    <a href="#" data-lang-my="Terma" data-lang-en="Terms">Terma</a> |
+    <a href="#" data-lang-my="Privasi" data-lang-en="Privacy">Privasi</a>
   </div>
 </footer>
 
@@ -165,6 +174,23 @@
     }
   });
 </script>
+
+<script>
+  function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+
+    document.querySelectorAll('[data-lang-my]').forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('language') || 'my';
+    setLanguage(lang);
+  });
+</script>
+
 
 </body>
 </html>
