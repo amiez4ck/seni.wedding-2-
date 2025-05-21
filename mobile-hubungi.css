@@ -3,6 +3,7 @@
   body {
     font-size: 15px;
     overflow-x: hidden;
+    padding-top: 3rem;
   }
 
   .mobile-nav-toggle {
@@ -18,22 +19,18 @@
   }
 
   #mobileMenu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 8px 20px rgba(1, 2, 2, 0.10);
-    z-index: 55;
-    padding: 1.2rem;
-    text-align: center;
-    animation: slideDown 0.8s ease forwards;
-  }
-
-  #mobileMenu.show {
-    display: flex;
+   display: none;
+   flex-direction: column;
+   position: fixed;
+   top: 0; /* pastikan menu turun selepas header */
+   left: 0;
+   right: 0;
+   background-color: white;
+   box-shadow: 0 8px 20px rgba(1, 2, 2, 0.10);
+   z-index: 999;
+   padding: 1.2rem;
+   text-align: center;
+    animation: slideDown 0.2s ease forwards;
   }
 
   #mobileMenu a {
@@ -43,6 +40,12 @@
     border-bottom: 1px solid #eee;
     display: block;
   }
+
+
+  #mobileMenu.hidden {
+  display: none !important;
+}
+
 
   nav.md\:flex {
     display: none !important;
