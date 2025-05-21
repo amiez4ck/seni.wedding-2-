@@ -77,7 +77,8 @@
 <body class="bg-[#fffaf6] text-gray-800">
 
 <header class="bg-white border-b shadow-sm px-4 py-3 flex justify-between items-center relative z-50">
-  <button class="mobile-nav-toggle block md:hidden text-2xl text-pink-500" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+ <button class="mobile-nav-toggle block md:hidden text-2xl text-pink-500" onclick="toggleMenu()">☰</button>
+
 
   <!-- Logo -->
   <a href="index.html" class="mx-auto md:mx-0">
@@ -105,7 +106,7 @@
 </header>
 
 <!-- Mobile Navigation -->
-<nav id="mobileMenu" class="md:hidden hidden flex-col px-4 py-2 space-y-2 bg-white shadow">
+<nav id="mobileMenu"  class="md:hidden hidden flex-col px-4 py-2 space-y-2 bg-white shadow">
   <a href="cart.html" id="troliIcon" data-lang-my="Troli 🛒" data-lang-en="Shopping Cart 🛒">Troli 🛒</a>
   <a href="index.html" data-lang-my="Halaman Utama" data-lang-en="Home">Halaman Utama</a>
   <a href="produk.html" data-lang-my="Produk" data-lang-en="Product">Produk</a>
@@ -162,10 +163,16 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init();</script>
-
 <script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  }
+
   document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobileMenu');
     const toggle = document.querySelector('.mobile-nav-toggle');
@@ -174,6 +181,15 @@
     }
   });
 </script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();
+  
+</script>
+
+
+
 
 <script>
   function setLanguage(lang) {
@@ -190,6 +206,8 @@
     setLanguage(lang);
   });
 </script>
+
+
 
 
 </body>
