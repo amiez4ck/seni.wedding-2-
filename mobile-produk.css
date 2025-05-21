@@ -136,8 +136,10 @@ nav.show {
   .produk-slider {
     display: flex;
     overflow-x: auto;
+    scroll-padding-left: 1rem;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    scroll-snap-align: start;
     -webkit-overflow-scrolling: touch;
     gap: 0.5rem;
     padding-bottom: 1rem;
