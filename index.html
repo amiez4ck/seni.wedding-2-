@@ -25,6 +25,19 @@
       font-family: 'Parisienne', cursive;
     }
 
+    @keyframes arrowFloat {
+  0%, 100% {
+    transform: rotate(-30deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-30deg) translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: arrowFloat 2s ease-in-out infinite;
+}
+
   </style>
 </head>
 
@@ -92,6 +105,18 @@
     <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-right"  data-aos-easing="ease-in-out" data-aos-delay="100" data-lang-my="📦 Pembuatan Teliti" data-lang-en="📦 Each Piece is crafted with care and attention to detail">📦 Pembuatan Teliti</h3><p class="text-sm text-gray-600" data-lang-my="Tempoh siap dalam masa 8 minggu" data-lang-en="Ready in 8 Weeks">Tempoh siap dalam masa 8 minggu.</p></div>
     <div><h3 class="font-semibold text-pink-600 mb-2" data-aos="fade-up-left"data-aos-easing="ease-in-out"  data-aos-delay="200" data-lang-my="💯 Jaminan Puas Hati" data-lang-en="💯 Satisfaction Guarantee">💯 Jaminan Puas Hati</h3><p class="text-sm text-gray-600" data-lang-my="Kami utamakan kepuasan pelanggan sepenuhnya." data-lang-en="We prioritize complete customer satisfaction.">Kami utamakan kepuasan pelanggan sepenuhnya.</p></div>
   </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-left justify-left gap-10 max-w-6xl mx-auto mt-16">
+   <div class="md:w-2/5" data-aos="fade-right">
+    <img src="img/img-board_why.png" alt="Contoh Produk Laser Cut" class="rounded-2xl shadow-xl w-full">
+   </div>
+
+<div class="md:w-1/2 text-justify" data-aos="fade-up-left">
+      <h3 class="text-3xl font-bold text-pink-600 mb-10" data-lang-my="Teknologi Laser Cut" data-lang-en="Laser Cut Technology">Teknologi Laser Cut</h3>
+      <p class="text-xl text-gray-700 leading-relaxed mb-2" data-lang-my="Teks dan imej dipotong dengan ketepatan tinggi untuk hasil eksklusif dan kemas." data-lang-en="Text and images are cut with high precision for a clean, exclusive finish.">Teks dan imej dipotong dengan ketepatan tinggi untuk hasil eksklusif dan kemas.</p>
+</div>
+  </div>
 </section>
 
 
@@ -100,13 +125,13 @@
   <h2 class="text-3xl font-bold text-center mb-6" data-lang-my="✨ Testimoni Pelanggan Kami" data-lang-en="✨ Customer Testimonials">✨ Testimoni Pelanggan Kami</h2>
 
     <div class="carousel-wrapper overflow-hidden w-full">
-        <div class="carousel-track flex gap-4 w-max transition-transform duration-700 ease-in-out" id="carouselTrack">
+        <div class="carousel-track flex gap-2 w-max transition-transform duration-700 ease-in-out" id="carouselTrack">
            <div class="scroll-track">
-        <div class="scroll-item data-aos="zoom-in" data-aos-delay="200"">
+        <div class="scroll-item" data-aos="zoom-in" data-aos-delay="200">
           <img src="img/testimoni-1.png" class="rounded-md object-contain w-full max-h-[260px] bg-white p-2">
           <h3 class="font-semibold text-center text-sm mt-2">Tiktok SeniWedding (1)</h3>
         </div>
-        <div class="scroll-item data-aos="zoom-in" data-aos-delay="200"">
+        <div class="scroll-item" data-aos="zoom-in" data-aos-delay="200">
           <img src="img/testimoni-2.png" class="rounded-md object-contain w-full max-h-[260px] bg-white p-2">
           <h3 class="font-semibold text-center text-sm">Tiktok SeniWedding (2)</h3>
         </div>
