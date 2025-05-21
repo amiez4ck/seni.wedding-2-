@@ -89,6 +89,28 @@
 
         <label class="block font-medium mt-4" data-lang-my="Catatan Tambahan (Opsyenal):" data-lang-en="Additional Notes (Optional):">Catatan Tambahan (Opsyenal):</label>
         <textarea id="catatan" rows="3" class="w-full border px-3 py-2 rounded" placeholder="Contoh: Perlu segera, atau pos sebelum tarikh tertentu."></textarea>
+        <!-- Wrapping Parcel Option -->
+<label class="block font-medium mt-4" data-lang-my="Pembungkusan Selamat:" data-lang-en="Safe Wrapping Option:">Pembungkusan Selamat:</label>
+<select id="wrapping" class="w-full border px-3 py-2 rounded">
+  <option value="0" data-lang-my="Tiada (Percuma)" data-lang-en="None (Free)">Tiada (Percuma)</option>
+  <option value="10" data-lang-my="Ya, Bungkus Selamat (Tambah RM10)" data-lang-en="Yes, Safety Wrapped (Add RM10)">Ya, Bungkus Selamat (Tambah RM10)</option>
+</select>
+
+<!-- Lokasi Penghantaran -->
+<label class="block font-medium mt-4" data-lang-my="Kawasan Penghantaran:" data-lang-en="Shipping Region:">Kawasan Penghantaran:</label>
+<select id="penghantaran" class="w-full border px-3 py-2 rounded">
+  <option value="0" data-lang-my="Semenanjung Malaysia (RM0)" data-lang-en=" Malaysia (RM0)">Semenanjung Malaysia (RM0)</option>
+  <option value="15" data-lang-my="Sabah & Sarawak (Tambah RM15)" data-lang-en="Sabah & Sarawak (Add RM15)">Sabah & Sarawak (Tambah RM15)</option>
+  <option value="35" data-lang-my="Singapura (Tambah RM35)" data-lang-en="Singapore (Add RM35)">Singapura (Tambah RM35)</option>
+</select>
+
+<!-- Paparan Harga Produk dan Jumlah Keseluruhan -->
+<div id="summaryHarga" class="bg-pink-50 border border-pink-200 text-sm text-gray-700 rounded p-4 mb-4 hidden">
+  <p><strong>Jumlah Harga Produk:</strong> <span id="hargaProduk">RM0.00</span> / <span id="hargaProdukSGD">S$0.00</span></p>
+  <p><strong>Wrapping Parcel:</strong> <span id="hargaWrapping">RM0.00</span>  / <span id="hargaWrappingSGD">S$0.00</span></p>
+  <p><strong>Penghantaran:</strong> <span id="hargaPenghantaran">RM0.00</span> / <span id="hargaPenghantaranSGD">S$0.00</span></p>
+  <p class="mt-2 text-pink-600 font-bold"><strong>Jumlah Keseluruhan:</strong> <span id="jumlahAkhir">RM0.00</span>  / <span id="jumlahAkhirSGD">S$0.00</span></p>
+</div>
 
         <div class="flex justify-end gap-4">
           <button type="button" onclick="kosongkanTroli()" class="px-4 py-2 border border-red-500 text-red-500 rounded hover:bg-red-100">Kosongkan Troli</button>
@@ -187,27 +209,38 @@ jumlahSgd += hargaSgd;
       const warnaCustom = document.getElementById("warnaCustom").value || "Tiada";
       const catatan = document.getElementById("catatan").value || "Tiada";
       const tarikh = document.getElementById("tarikhPerlu").value || "Tidak ditentukan";
+      const wrappingCost = parseFloat(document.getElementById("wrapping").value || 0);
+      const shippingCost = parseFloat(document.getElementById("penghantaran").value || 0);
+      const jumlahAkhirMYR = troli.reduce((sum, item) => sum + parseFloat(item.harga_myr.replace("RM", "")), 0) + wrappingCost + shippingCost;
+
 
       if (troli.length === 0) {
         alert("Troli anda kosong.");
         return;
       }
 
-      let mesej = `Tempahan Baru daripada ${nama} (${email})%0A`;
-      mesej += `Lokasi: ${lokasi}%0A`;
-      mesej += `Warna Dasar: ${warnaDasar}%0A`;
-      mesej += `Warna Custom: ${warnaCustom}%0A`;
-      mesej += `Tarikh Diperlukan: ${tarikh}%0A`;
-      mesej += `Catatan Pelanggan: ${catatan}%0A%0A`;
+      let mesej = `Tempahan Baru daripada ${nama} (${email})\n%`;
+      mesej += `Lokasi: ${lokasi}\n%`;
+      mesej += `Warna Dasar: ${warnaDasar}\n%`;
+      mesej += `Warna Custom: ${warnaCustom}\n%`;
+      mesej += `Tarikh Diperlukan: ${tarikh}\n%`;
+      mesej += `Catatan Pelanggan: ${catatan}\n\n`;
 
-      mesej += `Produk Dipilih:%0A`;
-      troli.forEach((item, i) => {
-        mesej += `${i + 1}. ${item.nama}%0A➡️ Harga MYR: ${item.harga_myr || 'N/A'}%0A➡️ Harga SGD: ${item.harga_sgd || 'N/A'}%0A%0A`;
+      mesej += `Produk Dipilih*:%0A`;
+      troli.forEach((item, index) => {
+      mesej += `${index + 1}. ${item.nama}\n`;
+      mesej += `   - Harga MYR: ${item.harga_myr}\n`;
+      mesej += `   - Harga SGD: ${item.harga_sgd}\n\n`;
       });
+      
+      mesej += `🚚 *Penghantaran*: RM${shippingCost.toFixed(2)}\n`;
+      mesej += `📦 *Wrapping Parcel*: RM${wrappingCost.toFixed(2)}\n\n`;
+      mesej += `💰 *Jumlah Keseluruhan (MYR)*: RM${jumlahAkhirMYR.toFixed(2)}\n\n`;
+
 
       mesej += `*Sila sahkan maklumat tempahan anda 😊*`;
 
-      const whatsappLink = `https://wa.me/60123456789?text=${encodeURIComponent(mesej)}`;
+      const whatsappLink = `https://wa.me/60134419744?text=${encodeURIComponent(mesej)}`;
       window.open(whatsappLink, "_blank");
       localStorage.removeItem("troliProduk");
     });
@@ -244,6 +277,35 @@ function buangAddon(indexProduk, indexAddon) {
 paparkanTroli();
 
 
+function kiraJumlahAkhirPaparan() {
+  const wrappingCost = parseFloat(document.getElementById("wrapping").value || 0);
+  const wrappingCostSGD = wrappingCost / 3.3;
+  const shippingCost = parseFloat(document.getElementById("penghantaran").value || 0);
+  const shippingCostSGD = shippingCost / 3.3;
+  const troli = JSON.parse(localStorage.getItem("troliProduk")) || [];
+  const jumlahProduk = troli.reduce((sum, item) => sum + parseFloat(item.harga_myr.replace("RM", "")), 0);
+  const jumlahAkhir = jumlahProduk + wrappingCost + shippingCost;
+  const jumlahAkhirSGD = jumlahAkhir / 3.3;
+
+  document.getElementById("hargaProduk").textContent = `RM${jumlahProduk.toFixed(2)}`;
+  document.getElementById("hargaWrapping").textContent = `RM${wrappingCost.toFixed(2)}`;
+  document.getElementById("hargaWrappingSGD").textContent = `S$${wrappingCostSGD.toFixed(2)}`;
+  document.getElementById("hargaPenghantaran").textContent = `RM${shippingCost.toFixed(2)}`;
+  document.getElementById("hargaPenghantaranSGD").textContent = `S$${shippingCostSGD.toFixed(2)}`;
+  document.getElementById("jumlahAkhir").textContent = `RM${jumlahAkhir.toFixed(2)}`;
+  document.getElementById("jumlahAkhirSGD").textContent = `S$${jumlahAkhirSGD.toFixed(2)}`;
+  document.getElementById("summaryHarga").classList.remove("hidden");
+}
+
+  document.addEventListener("DOMContentLoaded", () => {
+    kiraJumlahAkhirPaparan();
+
+
+  document.getElementById("wrapping").addEventListener("change", kiraJumlahAkhirPaparan);
+  document.getElementById("penghantaran").addEventListener("change", kiraJumlahAkhirPaparan);
+
+});
+
   </script>
 
   <script>
@@ -257,6 +319,7 @@ paparkanTroli();
 
   // Apply saved language on load
   document.addEventListener("DOMContentLoaded", () => {
+    
     const lang = localStorage.getItem('language') || 'my';
     setLanguage(lang);
   });
