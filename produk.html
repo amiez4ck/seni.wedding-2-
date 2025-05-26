@@ -9,6 +9,23 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
 
+    @media only screen and (min-width: 769px) {
+  .produk-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+  }
+
+  .produk-slider .product-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 280px;
+    max-width: 300px;
+  }
+}
+
+
  html, body {
   overflow: visible !important;
   position: relative;
